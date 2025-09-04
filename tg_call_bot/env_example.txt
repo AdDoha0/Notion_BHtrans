@@ -1,0 +1,21 @@
+# Telegram Bot Configuration
+BOT_TOKEN=your_bot_token_here
+
+# Logging
+LOG_LEVEL=INFO
+
+# Admin IDs (comma-separated)
+ADMIN_IDS=123456789,987654321
+
+# Database (optional)
+DATABASE_URL=sqlite:///bot_database.db
+
+# Redis (optional, for FSM storage)
+REDIS_URL=redis://localhost:6379
+
+# Webhook settings (optional)
+# WEBHOOK_URL=https://your-domain.com
+# WEBHOOK_PATH=/webhook
+
+# Proxy settings (optional)
+# PROXY_URL=socks5://user:pass@host:port 
