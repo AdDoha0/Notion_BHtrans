@@ -9,6 +9,11 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("Не установлен BOT_TOKEN в переменных окружения")
 
+# Настройки OpenAI
+OPENAI_API_KEY = os.getenv("OPENAI_KEY")
+if not OPENAI_API_KEY:
+    raise ValueError("Не установлен OPENAI_API_KEY в переменных окружения")
+
 # Настройки логирования
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
@@ -29,4 +34,4 @@ WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 WEBHOOK_PATH = os.getenv("WEBHOOK_PATH", "/webhook")
 
 # Настройки прокси (если нужен)
-PROXY_URL = os.getenv("PROXY_URL") 
+PROXY_URL = os.getenv("PROXY_URL")

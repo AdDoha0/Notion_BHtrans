@@ -4,10 +4,13 @@ from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
+from aiogram.client.default import DefaultBotProperties
 from aiohttp import web
 
 from config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
-from handlers import register_handlers
+from handlers.cmd import register_handlers
+from handlers.handlers import router
+
 
 # Настройка логирования
 logging.basicConfig(
@@ -18,10 +21,12 @@ logger = logging.getLogger(__name__)
 
 
 async def main():
-    # Инициализация бота и диспетчера
-    bot = Bot(token=BOT_TOKEN, parse_mode=ParseMode.HTML)
+    # Инициализация бота и диспетчера с новым синтаксисом
+    default = DefaultBotProperties(parse_mode=ParseMode.HTML)
+    bot = Bot(token=BOT_TOKEN, default=default)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
+    dp.include_router(router)
     
     # Регистрация обработчиков
     register_handlers(dp)
@@ -48,6 +53,7 @@ async def main():
         logger.info("Запуск бота через long polling...")
         await dp.start_polling(bot)
 
+ 
 
 if __name__ == "__main__":
     try:
