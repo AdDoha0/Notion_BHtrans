@@ -10,6 +10,7 @@ from aiohttp import web
 from config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
 from handlers.cmd import register_handlers
 from handlers.handlers import router
+from handlers.notion_handlers import router as notion_router
 
 
 # Настройка логирования
@@ -26,6 +27,9 @@ async def main():
     bot = Bot(token=BOT_TOKEN, default=default)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
+    # Сначала подключаем специфичные обработчики (Notion)
+    dp.include_router(notion_router)
+    # Потом общие обработчики (AI чат)
     dp.include_router(router)
     
     # Регистрация обработчиков
