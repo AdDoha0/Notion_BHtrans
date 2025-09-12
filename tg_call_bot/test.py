@@ -20,17 +20,4 @@ async def transcription(file_path: str) -> str:
     return response.text
 
 
-async def create_gptAnswer(message: str) -> str:
-    response = await client.chat.completions.create(
-        model="gpt-5",
-        reasoning_effort="high",
-        messages=[
-            {"role": "system", "content": promt},
-            {"role": "user", "content": message}
-        ]
-    )
-    return response.choices[0].message.content
 
-
-transcription_text = asyncio.run(transcription("../mock_audio/hr_test_2.mp3"))
-print(asyncio.run(create_gptAnswer(transcription_text)))
