@@ -155,7 +155,7 @@ async def handle_driver_selection(callback: CallbackQuery, state: FSMContext):
             notes_preview = driver_info['notes'][:200] + "..." if len(driver_info['notes']) > 200 else driver_info['notes']
             info_text += f"\n📝 Текущие заметки:\n{notes_preview}\n"
         
-        info_text += "\n💬 Теперь отправьте текстовый комментарий:"
+        info_text += "\n💬 Теперь отправьте запись звонка:"
         
         # Создаем клавиатуру с кнопкой отмены
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
@@ -345,14 +345,6 @@ async def show_detailed_driver_info(callback: CallbackQuery):
         
         # Кнопки для работы с комментариями
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(
-                text="💬 Добавить комментарий", 
-                callback_data=f"driver_select:{driver_id}"
-            )],
-            [InlineKeyboardButton(
-                text="📄 Все комментарии", 
-                callback_data=f"show_comments:{driver_id}"
-            )] if comments else [],
             [InlineKeyboardButton(text="🔙 Назад к списку", callback_data="back_to_drivers")],
             [InlineKeyboardButton(text="❌ Закрыть", callback_data="info_cancel")]
         ])
@@ -415,10 +407,6 @@ async def show_all_comments(callback: CallbackQuery):
         
         # Кнопки навигации
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton(
-                text="💬 Добавить комментарий", 
-                callback_data=f"driver_select:{driver_id}"
-            )],
             [InlineKeyboardButton(
                 text="🔙 К информации о водителе", 
                 callback_data=f"info_show:{driver_id}"
