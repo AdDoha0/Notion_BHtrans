@@ -17,6 +17,10 @@ NOTION_DATABASE_ID = os.getenv("NOTION_DATABASE_ID")
 if not NOTION_DATABASE_ID:
     raise ValueError("Не установлен NOTION_DATABASE_ID в переменных окружения")
 
+OPENAI_KEY = os.getenv("OPENAI_KEY")
+if not OPENAI_KEY:
+    raise ValueError("Не установлен OPENAI_KEY в переменных окружения")
+
 # Настройки логирования
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
