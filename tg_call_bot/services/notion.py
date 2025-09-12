@@ -65,7 +65,7 @@ class NotionService:
     
     async def add_comment_to_page(self, page_id: str, comment: str) -> bool:
         """
-        Добавляет комментарий к странице в поле Notes
+        Создает новый комментарий к странице в Notion
         
         Args:
             page_id (str): ID страницы в Notion
@@ -75,50 +75,62 @@ class NotionService:
             bool: True если комментарий добавлен успешно, False в противном случае
         """
         try:
-            # Сначала получаем текущую страницу, чтобы узнать существующие заметки
-            page = await self.client.pages.retrieve(page_id=page_id)
-            
-            # Получаем текущие заметки
-            current_notes = ""
-            notes_property = page["properties"].get("Notes", {})
-            
-            if notes_property.get("type") == "rich_text":
-                rich_text_list = notes_property.get("rich_text", [])
-                if rich_text_list:
-                    current_notes = "".join([text["plain_text"] for text in rich_text_list])
-            
-            # Формируем новый комментарий с датой и временем
-            timestamp = datetime.now().strftime("%d.%m.%Y %H:%M")
-            new_comment = f"[{timestamp}] {comment}"
-            
-            # Объединяем существующие заметки с новым комментарием
-            if current_notes.strip():
-                updated_notes = f"{current_notes}\n\n{new_comment}"
-            else:
-                updated_notes = new_comment
-            
-            # Обновляем страницу
-            await self.client.pages.update(
-                page_id=page_id,
-                properties={
-                    "Notes": {
-                        "rich_text": [
-                            {
-                                "text": {
-                                    "content": updated_notes
-                                }
-                            }
-                        ]
+            # Создаем новый комментарий к странице
+            await self.client.comments.create(
+                parent={"page_id": page_id},
+                rich_text=[
+                    {
+                        "text": {
+                            "content": comment
+                        }
                     }
-                }
+                ]
             )
             
-            logger.info(f"Комментарий добавлен к странице {page_id}")
+            logger.info(f"Комментарий создан для страницы {page_id}")
             return True
             
         except Exception as e:
-            logger.error(f"Ошибка при добавлении комментария к странице {page_id}: {e}")
+            logger.error(f"Ошибка при создании комментария для страницы {page_id}: {e}")
             return False
+    
+    async def get_page_comments(self, page_id: str) -> List[Dict]:
+        """
+        Получает список комментариев к странице
+        
+        Args:
+            page_id (str): ID страницы в Notion
+            
+        Returns:
+            List[Dict]: Список комментариев с информацией о времени создания и авторе
+        """
+        try:
+            # Получаем комментарии к странице
+            response = await self.client.comments.list(block_id=page_id)
+            
+            comments = []
+            for comment in response.get("results", []):
+                comment_data = {
+                    "id": comment["id"],
+                    "created_time": comment["created_time"],
+                    "last_edited_time": comment["last_edited_time"],
+                    "created_by": comment.get("created_by", {}),
+                    "text": ""
+                }
+                
+                # Извлекаем текст комментария
+                rich_text = comment.get("rich_text", [])
+                if rich_text:
+                    comment_data["text"] = "".join([text.get("plain_text", "") for text in rich_text])
+                
+                comments.append(comment_data)
+            
+            logger.info(f"Получено {len(comments)} комментариев для страницы {page_id}")
+            return comments
+            
+        except Exception as e:
+            logger.error(f"Ошибка при получении комментариев для страницы {page_id}: {e}")
+            return []
     
     async def get_page_details(self, page_id: str) -> Optional[Dict]:
         """
@@ -229,3 +241,16 @@ async def get_driver_info(page_id: str) -> Optional[Dict]:
         Optional[Dict]: Информация о водителе
     """
     return await notion_service.get_page_details(page_id)
+
+
+async def get_driver_comments(page_id: str) -> List[Dict]:
+    """
+    Получает комментарии к записи водителя
+    
+    Args:
+        page_id (str): ID записи водителя
+        
+    Returns:
+        List[Dict]: Список комментариев
+    """
+    return await notion_service.get_page_comments(page_id)

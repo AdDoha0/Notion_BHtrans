@@ -9,7 +9,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 import logging
 
-from services.notion import get_driver_list, add_comment, get_driver_info
+from services.notion import get_driver_list, add_comment, get_driver_info, get_driver_comments
 
 # Настройка логгера
 logger = logging.getLogger(__name__)
@@ -20,6 +20,51 @@ router = Router()
 class NotionStates(StatesGroup):
     waiting_for_driver_selection = State()
     waiting_for_comment = State()
+
+@router.message(Command("start"))
+async def start_command(message: Message):
+    """Обрабатывает команду /start"""
+    welcome_text = """
+👋 **Добро пожаловать в BH Trans Bot!**
+
+Этот бот поможет вам работать с базой данных водителей в Notion.
+
+🚀 **Быстрый старт:**
+• `/drivers` - добавить комментарий к водителю
+• `/driver_info` - просмотр информации о водителях  
+• `/help` - подробная справка
+
+💡 **Подсказка:** Отправляйте текстовые комментарии для добавления заметок к водителям!
+    """
+    
+    await message.answer(welcome_text, parse_mode="Markdown")
+
+@router.message(Command("help"))
+async def show_help(message: Message):
+    """Показывает справку по командам"""
+    help_text = """
+🤖 **Помощь по боту**
+
+📋 **Доступные команды:**
+• `/start` - начать работу с ботом
+• `/drivers` - выбрать водителя и добавить комментарий
+• `/driver_info` - просмотр информации о водителях
+• `/help` - показать эту справку
+
+💬 **Как добавить комментарий:**
+1. Выберите команду `/drivers`
+2. Выберите водителя из списка  
+3. Отправьте текстовый комментарий
+
+✨ **Особенности:**
+• Комментарии сохраняются как отдельные записи в Notion
+• Просмотр истории комментариев
+• Разделение между статическими заметками и динамическими комментариями
+
+❓ Если у вас есть вопросы, обратитесь к администратору.
+    """
+    
+    await message.answer(help_text, parse_mode="Markdown")
 
 @router.message(Command("drivers"))
 async def show_drivers_command(message: Message, state: FSMContext):
@@ -110,7 +155,7 @@ async def handle_driver_selection(callback: CallbackQuery, state: FSMContext):
             notes_preview = driver_info['notes'][:200] + "..." if len(driver_info['notes']) > 200 else driver_info['notes']
             info_text += f"\n📝 Текущие заметки:\n{notes_preview}\n"
         
-        info_text += "\n💬 Теперь отправьте комментарий, который хотите добавить:"
+        info_text += "\n💬 Теперь отправьте текстовый комментарий:"
         
         # Создаем клавиатуру с кнопкой отмены
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
@@ -148,7 +193,7 @@ async def handle_comment_cancel(callback: CallbackQuery, state: FSMContext):
 
 @router.message(StateFilter(NotionStates.waiting_for_comment))
 async def handle_comment_input(message: Message, state: FSMContext):
-    """Обрабатывает ввод комментария"""
+    """Обрабатывает ввод комментария (текст или голос)"""
     
     try:
         # Получаем данные из состояния
@@ -161,14 +206,18 @@ async def handle_comment_input(message: Message, state: FSMContext):
             await state.clear()
             return
         
-        comment_text = message.text.strip()
+        # Обрабатываем только текстовые сообщения
+        if message.text:
+            comment_text = message.text.strip()
+            processing_msg = await message.answer("🔄 Добавляю комментарий...")
         
-        if not comment_text:
-            await message.answer("❌ Комментарий не может быть пустым. Попробуйте еще раз:")
+        else:
+            await message.answer("❌ Отправьте текстовый комментарий:")
             return
         
-        # Показываем сообщение о процессе добавления
-        processing_msg = await message.answer("🔄 Добавляю комментарий...")
+        if not comment_text or comment_text.strip() == "":
+            await message.answer("❌ Комментарий не может быть пустым. Попробуйте еще раз:")
+            return
         
         # Добавляем комментарий
         success = await add_comment(driver_id, comment_text)
@@ -262,18 +311,48 @@ async def show_detailed_driver_info(callback: CallbackQuery):
         
         info_text += f"🚛 Прицеп: {'Да' if driver_info['trailer'] else 'Нет'}\n"
         
-        # Добавляем заметки/комментарии
+        # Добавляем заметки (статичные)
         if driver_info['notes']:
             info_text += f"\n📝 **Заметки:**\n{driver_info['notes']}\n"
         else:
             info_text += f"\n📝 Заметки отсутствуют\n"
         
-        # Кнопка для добавления комментария
+        # Получаем и добавляем комментарии
+        comments = await get_driver_comments(driver_id)
+        if comments:
+            info_text += f"\n💬 **Комментарии ({len(comments)}):**\n"
+            # Показываем последние 3 комментария
+            for i, comment in enumerate(comments[-3:]):
+                created_time = comment.get('created_time', '')
+                if created_time:
+                    # Форматируем время
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(created_time.replace('Z', '+00:00'))
+                        formatted_time = dt.strftime('%d.%m.%Y %H:%M')
+                    except:
+                        formatted_time = created_time[:10]  # Берем только дату
+                else:
+                    formatted_time = "Неизвестно"
+                
+                comment_text = comment.get('text', '')[:100] + "..." if len(comment.get('text', '')) > 100 else comment.get('text', '')
+                info_text += f"• [{formatted_time}] {comment_text}\n"
+            
+            if len(comments) > 3:
+                info_text += f"... и еще {len(comments) - 3} комментариев\n"
+        else:
+            info_text += f"\n💬 Комментарии отсутствуют\n"
+        
+        # Кнопки для работы с комментариями
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(
                 text="💬 Добавить комментарий", 
                 callback_data=f"driver_select:{driver_id}"
             )],
+            [InlineKeyboardButton(
+                text="📄 Все комментарии", 
+                callback_data=f"show_comments:{driver_id}"
+            )] if comments else [],
             [InlineKeyboardButton(text="🔙 Назад к списку", callback_data="back_to_drivers")],
             [InlineKeyboardButton(text="❌ Закрыть", callback_data="info_cancel")]
         ])
@@ -295,6 +374,69 @@ async def handle_info_cancel(callback: CallbackQuery):
     """Закрытие просмотра информации"""
     await callback.message.edit_text("ℹ️ Просмотр информации завершен")
     await callback.answer()
+
+@router.callback_query(F.data.startswith("show_comments:"))
+async def show_all_comments(callback: CallbackQuery):
+    """Показывает все комментарии к водителю"""
+    
+    try:
+        driver_id = callback.data.split(":", 1)[1]
+        
+        # Получаем информацию о водителе и его комментарии
+        driver_info = await get_driver_info(driver_id)
+        comments = await get_driver_comments(driver_id)
+        
+        if not driver_info:
+            await callback.answer("❌ Не удалось получить информацию о водителе")
+            return
+        
+        # Формируем текст с комментариями
+        info_text = f"💬 **Все комментарии к {driver_info['name']}**\n\n"
+        
+        if comments:
+            info_text += f"Всего комментариев: {len(comments)}\n\n"
+            
+            for i, comment in enumerate(comments, 1):
+                created_time = comment.get('created_time', '')
+                if created_time:
+                    try:
+                        from datetime import datetime
+                        dt = datetime.fromisoformat(created_time.replace('Z', '+00:00'))
+                        formatted_time = dt.strftime('%d.%m.%Y %H:%M')
+                    except:
+                        formatted_time = created_time[:10]
+                else:
+                    formatted_time = "Неизвестно"
+                
+                comment_text = comment.get('text', '')
+                info_text += f"**{i}.** [{formatted_time}]\n{comment_text}\n\n"
+        else:
+            info_text += "Комментарии отсутствуют"
+        
+        # Кнопки навигации
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(
+                text="💬 Добавить комментарий", 
+                callback_data=f"driver_select:{driver_id}"
+            )],
+            [InlineKeyboardButton(
+                text="🔙 К информации о водителе", 
+                callback_data=f"info_show:{driver_id}"
+            )],
+            [InlineKeyboardButton(text="❌ Закрыть", callback_data="info_cancel")]
+        ])
+        
+        await callback.message.edit_text(
+            info_text,
+            reply_markup=keyboard,
+            parse_mode="Markdown"
+        )
+        
+        await callback.answer()
+        
+    except Exception as e:
+        logger.error(f"Ошибка при показе комментариев: {e}")
+        await callback.answer("❌ Произошла ошибка при загрузке комментариев")
 
 @router.callback_query(F.data == "back_to_drivers")
 async def back_to_drivers_list(callback: CallbackQuery):

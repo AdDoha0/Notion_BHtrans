@@ -5,7 +5,9 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
 from aiogram.client.default import DefaultBotProperties
+from aiogram.client.session.aiohttp import AiohttpSession
 from aiohttp import web
+import aiohttp
 
 from config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
 from handlers.cmd import register_handlers
@@ -27,9 +29,9 @@ async def main():
     bot = Bot(token=BOT_TOKEN, default=default)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
-    # Сначала подключаем специфичные обработчики (Notion)
+    # Подключаем обработчики Notion
     dp.include_router(notion_router)
-    # Потом общие обработчики (AI чат)
+    # Подключаем общие обработчики (пустой роутер)
     dp.include_router(router)
     
     # Регистрация обработчиков
@@ -55,7 +57,12 @@ async def main():
     else:
         # Запуск через long polling
         logger.info("Запуск бота через long polling...")
-        await dp.start_polling(bot)
+        try:
+            await dp.start_polling(bot, skip_updates=True)
+        except Exception as e:
+            logger.error(f"Ошибка при polling: {e}")
+            await asyncio.sleep(5)  # Пауза перед повторной попыткой
+            raise
 
  
 
