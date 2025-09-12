@@ -262,6 +262,7 @@ async def show_detailed_driver_info(callback: CallbackQuery):
         
         info_text += f"🚛 Прицеп: {'Да' if driver_info['trailer'] else 'Нет'}\n"
         
+        # Добавляем заметки/комментарии
         if driver_info['notes']:
             info_text += f"\n📝 **Заметки:**\n{driver_info['notes']}\n"
         else:

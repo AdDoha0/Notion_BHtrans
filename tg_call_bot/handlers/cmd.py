@@ -1,9 +1,6 @@
 from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
-# from aiogram import Router
-
-
 
 
 async def cmd_start(message: Message):
