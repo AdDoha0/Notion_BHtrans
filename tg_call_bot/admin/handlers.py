@@ -9,6 +9,7 @@ import os
 from datetime import datetime
 
 from config import ADMINS
+from services.openai import get_main_prompt, get_response_template, save_main_prompt, save_response_template
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +18,8 @@ router = Router()
 # Состояния для админ панели
 class AdminStates(StatesGroup):
     waiting_for_broadcast = State()
+    waiting_for_main_prompt = State()
+    waiting_for_response_template = State()
 
 # Проверка админских прав
 def is_admin(user_id: int) -> bool:
@@ -30,11 +33,28 @@ def get_admin_keyboard():
             InlineKeyboardButton(text="💻 Система", callback_data="admin_system")
         ],
         [
-            # InlineKeyboardButton(text="📢 Рассылка", callback_data="admin_broadcast"),
+            InlineKeyboardButton(text="🤖 Промт", callback_data="admin_prompt"),
             InlineKeyboardButton(text="📋 Логи", callback_data="admin_logs")
         ],
         [
             InlineKeyboardButton(text="❌ Закрыть", callback_data="admin_close")
+        ]
+    ])
+    return keyboard
+
+# Меню управления промтом
+def get_prompt_keyboard():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="📝 Основной промт", callback_data="admin_prompt_main"),
+            InlineKeyboardButton(text="📋 Шаблон ответа", callback_data="admin_prompt_template")
+        ],
+        [
+            InlineKeyboardButton(text="👁️ Текущий промт", callback_data="admin_prompt_view"),
+            InlineKeyboardButton(text="👁️ Текущий шаблон", callback_data="admin_template_view")
+        ],
+        [
+            InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back")
         ]
     ])
     return keyboard
@@ -62,20 +82,30 @@ async def admin_callback_handler(callback: CallbackQuery, state: FSMContext):
         await callback.answer("❌ Нет доступа")
         return
     
-    action = callback.data.split("_")[1]
+    action = callback.data
     
-    if action == "stats":
+    if action == "admin_stats":
         await show_stats(callback)
-    elif action == "system":
+    elif action == "admin_system":
         await show_system_info(callback)
-    elif action == "broadcast":
+    elif action == "admin_broadcast":
         await start_broadcast(callback, state)
-    elif action == "logs":
+    elif action == "admin_logs":
         await show_logs(callback)
-    elif action == "close":
+    elif action == "admin_prompt":
+        await show_prompt_menu(callback)
+    elif action == "admin_close":
         await callback.message.delete()
-    elif action == "back":
+    elif action == "admin_back":
         await show_main_menu(callback)
+    elif action == "admin_prompt_main":
+        await edit_main_prompt(callback, state)
+    elif action == "admin_prompt_template":
+        await edit_response_template(callback, state)
+    elif action == "admin_prompt_view":
+        await view_current_prompt(callback)
+    elif action == "admin_template_view":
+        await view_current_template(callback)
 
 async def show_stats(callback: CallbackQuery):
     """Показать статистику бота"""
@@ -148,6 +178,19 @@ async def process_broadcast(message: Message, state: FSMContext):
     
     await state.clear()
 
+@router.message(Command("cancel"))
+async def cancel_admin_action(message: Message, state: FSMContext):
+    """Отмена текущего админского действия"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    current_state = await state.get_state()
+    if current_state:
+        await state.clear()
+        await message.answer("❌ Действие отменено.")
+    else:
+        await message.answer("ℹ️ Нет активных действий для отмены.")
+
 async def show_logs(callback: CallbackQuery):
     """Показать последние логи"""
     text = """
@@ -176,4 +219,136 @@ async def show_main_menu(callback: CallbackQuery):
     """
     
     await callback.message.edit_text(text, reply_markup=get_admin_keyboard())
+
+async def show_prompt_menu(callback: CallbackQuery):
+    """Показать меню управления промтом"""
+    text = """
+🤖 <b>Управление промтом</b>
+
+Выберите что вы хотите изменить:
+• <b>Основной промт</b> - инструкции и правила для AI
+• <b>Шаблон ответа</b> - структура отчета
+
+Или посмотрите текущие настройки.
+    """
+    
+    await callback.message.edit_text(text, reply_markup=get_prompt_keyboard())
+
+async def edit_main_prompt(callback: CallbackQuery, state: FSMContext):
+    """Начать редактирование основного промта"""
+    current_prompt = get_main_prompt()
+    
+    text = f"""
+📝 <b>Редактирование основного промта</b>
+
+<b>Текущий промт:</b>
+<code>{current_prompt}</code>
+
+Отправьте новый промт следующим сообщением.
+Для отмены используйте /cancel
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_prompt")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_main_prompt)
+
+async def edit_response_template(callback: CallbackQuery, state: FSMContext):
+    """Начать редактирование шаблона ответа"""
+    current_template = get_response_template()
+    
+    text = f"""
+📋 <b>Редактирование шаблона ответа</b>
+
+<b>Текущий шаблон:</b>
+<code>{current_template}</code>
+
+Отправьте новый шаблон следующим сообщением.
+Для отмены используйте /cancel
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_prompt")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_response_template)
+
+async def view_current_prompt(callback: CallbackQuery):
+    """Показать текущий основной промт"""
+    current_prompt = get_main_prompt()
+    
+    text = f"""
+📝 <b>Текущий основной промт</b>
+
+<code>{current_prompt}</code>
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="✏️ Изменить", callback_data="admin_prompt_main")],
+        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_prompt")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+async def view_current_template(callback: CallbackQuery):
+    """Показать текущий шаблон ответа"""
+    current_template = get_response_template()
+    
+    text = f"""
+📋 <b>Текущий шаблон ответа</b>
+
+<code>{current_template}</code>
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="✏️ Изменить", callback_data="admin_prompt_template")],
+        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_prompt")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+@router.message(AdminStates.waiting_for_main_prompt)
+async def process_main_prompt(message: Message, state: FSMContext):
+    """Обработка нового основного промта"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    new_prompt = message.text.strip()
+    
+    if save_main_prompt(new_prompt):
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="🔙 К управлению промтом", callback_data="admin_prompt")],
+            [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+        ])
+        await message.answer("✅ Основной промт успешно обновлен!", reply_markup=keyboard)
+        logger.info(f"Админ {message.from_user.id} обновил основной промт")
+    else:
+        await message.answer("❌ Ошибка при сохранении промта. Попробуйте еще раз.")
+        logger.error(f"Ошибка сохранения промта от админа {message.from_user.id}")
+    
+    await state.clear()
+
+@router.message(AdminStates.waiting_for_response_template)
+async def process_response_template(message: Message, state: FSMContext):
+    """Обработка нового шаблона ответа"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    new_template = message.text.strip()
+    
+    if save_response_template(new_template):
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="🔙 К управлению промтом", callback_data="admin_prompt")],
+            [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+        ])
+        await message.answer("✅ Шаблон ответа успешно обновлен!", reply_markup=keyboard)
+        logger.info(f"Админ {message.from_user.id} обновил шаблон ответа")
+    else:
+        await message.answer("❌ Ошибка при сохранении шаблона. Попробуйте еще раз.")
+        logger.error(f"Ошибка сохранения шаблона от админа {message.from_user.id}")
+    
+    await state.clear()
 
