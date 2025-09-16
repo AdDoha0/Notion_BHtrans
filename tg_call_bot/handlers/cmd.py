@@ -1,6 +1,7 @@
 from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
+from config import ADMINS
 
 
 async def cmd_start(message: Message):
@@ -18,9 +19,15 @@ async def cmd_help(message: Message):
 /start - Начать работу с ботом
 /help - Показать это сообщение
 /drivers - Показать список водителей
-
-Для получения дополнительной информации обратитесь к администратору.
-    """
+"""
+    
+    # Добавляем админские команды для администраторов
+    if message.from_user.id in ADMINS:
+        help_text += "\n🔧 <b>Команды администратора:</b>\n"
+        help_text += "/admin - Панель администратора\n"
+    
+    help_text += "\nДля получения дополнительной информации обратитесь к администратору."
+    
     await message.answer(help_text)
 
 

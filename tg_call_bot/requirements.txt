@@ -6,6 +6,9 @@ aiohttp>=3.8.0
 # Notion API
 notion-client>=2.0.0
 
+# Admin panel dependencies
+psutil>=5.9.0
+
 # Optional dependencies
 # redis>=4.0.0  # For Redis FSM storage
 # sqlalchemy>=2.0.0  # For database operations

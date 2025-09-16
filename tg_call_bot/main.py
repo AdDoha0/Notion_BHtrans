@@ -13,6 +13,7 @@ from config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
 from handlers.cmd import register_handlers
 from handlers.handlers import router
 from handlers.notion_handlers import router as notion_router
+from admin.handlers import router as admin_router
 
 
 # Настройка логирования
@@ -29,6 +30,8 @@ async def main():
     bot = Bot(token=BOT_TOKEN, default=default)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
+    # Подключаем админ обработчики (приоритет)
+    dp.include_router(admin_router)
     # Подключаем обработчики Notion
     dp.include_router(notion_router)
     # Подключаем общие обработчики (пустой роутер)
