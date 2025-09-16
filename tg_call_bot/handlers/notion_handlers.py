@@ -10,6 +10,9 @@ from aiogram.fsm.state import State, StatesGroup
 import logging
 
 from services.notion import get_driver_list, add_comment, get_driver_info, get_driver_comments
+from services.openai import process_audio_to_comment
+import aiofiles
+import os
 
 # Настройка логгера
 logger = logging.getLogger(__name__)
@@ -155,7 +158,7 @@ async def handle_driver_selection(callback: CallbackQuery, state: FSMContext):
             notes_preview = driver_info['notes'][:200] + "..." if len(driver_info['notes']) > 200 else driver_info['notes']
             info_text += f"\n📝 Текущие заметки:\n{notes_preview}\n"
         
-        info_text += "\n💬 Теперь отправьте запись звонка:"
+        info_text += "\n🎙️ Теперь отправьте запись звонка (аудио) или текстовый комментарий:"
         
         # Создаем клавиатуру с кнопкой отмены
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
@@ -193,7 +196,7 @@ async def handle_comment_cancel(callback: CallbackQuery, state: FSMContext):
 
 @router.message(StateFilter(NotionStates.waiting_for_comment))
 async def handle_comment_input(message: Message, state: FSMContext):
-    """Обрабатывает ввод комментария (текст или голос)"""
+    """Обрабатывает ввод комментария (текст или аудио)"""
     
     try:
         # Получаем данные из состояния
@@ -206,28 +209,138 @@ async def handle_comment_input(message: Message, state: FSMContext):
             await state.clear()
             return
         
-        # Обрабатываем только текстовые сообщения
+        comment_text = ""
+        processing_msg = None
+        
+        # Обрабатываем текстовые сообщения
         if message.text:
             comment_text = message.text.strip()
+            if not comment_text:
+                await message.answer("❌ Комментарий не может быть пустым. Попробуйте еще раз:")
+                return
             processing_msg = await message.answer("🔄 Добавляю комментарий...")
         
+        # Обрабатываем аудиосообщения
+        elif message.voice:
+            processing_msg = await message.answer("🎙️ Обрабатываю аудиозапись...")
+            
+            try:
+                # Создаем временную папку если её нет
+                temp_dir = os.path.join(os.path.dirname(__file__), "..", "temp")
+                os.makedirs(temp_dir, exist_ok=True)
+                
+                # Получаем файл
+                file_info = await message.bot.get_file(message.voice.file_id)
+                file_path = os.path.join(temp_dir, f"voice_{message.voice.file_id}.ogg")
+                
+                # Скачиваем файл
+                await message.bot.download_file(file_info.file_path, file_path)
+                
+                await processing_msg.edit_text("🔄 Транскрибирую и анализирую запись...")
+                
+                # Обрабатываем аудио: транскрибация + анализ GPT
+                comment_text = await process_audio_to_comment(file_path)
+                
+                # Удаляем временный файл
+                try:
+                    os.remove(file_path)
+                except:
+                    pass
+                    
+            except Exception as e:
+                logger.error(f"Ошибка при обработке аудио: {e}")
+                await processing_msg.edit_text("❌ Ошибка при обработке аудиозаписи. Попробуйте отправить текстовый комментарий.")
+                return
+        
+        # Обрабатываем аудиофайлы (документы)
+        elif message.audio or message.document:
+            processing_msg = await message.answer("🎙️ Обрабатываю аудиофайл...")
+            
+            try:
+                # Создаем временную папку если её нет
+                temp_dir = os.path.join(os.path.dirname(__file__), "..", "temp")
+                os.makedirs(temp_dir, exist_ok=True)
+                
+                # Определяем тип файла
+                if message.audio:
+                    file_info = await message.bot.get_file(message.audio.file_id)
+                    file_extension = "mp3"
+                    file_id = message.audio.file_id
+                else:  # document
+                    file_info = await message.bot.get_file(message.document.file_id)
+                    file_name = message.document.file_name or "audio"
+                    file_extension = file_name.split('.')[-1] if '.' in file_name else "mp3"
+                    file_id = message.document.file_id
+                
+                file_path = os.path.join(temp_dir, f"audio_{file_id}.{file_extension}")
+                
+                # Скачиваем файл
+                await message.bot.download_file(file_info.file_path, file_path)
+                
+                await processing_msg.edit_text("🔄 Транскрибирую и анализирую запись...")
+                
+                # Обрабатываем аудио: транскрибация + анализ GPT
+                comment_text = await process_audio_to_comment(file_path)
+                
+                # Удаляем временный файл
+                try:
+                    os.remove(file_path)
+                except:
+                    pass
+                    
+            except Exception as e:
+                logger.error(f"Ошибка при обработке аудиофайла: {e}")
+                await processing_msg.edit_text("❌ Ошибка при обработке аудиофайла. Попробуйте отправить текстовый комментарий.")
+                return
+        
         else:
-            await message.answer("❌ Отправьте текстовый комментарий:")
+            await message.answer("❌ Отправьте аудиозапись или текстовый комментарий:")
             return
         
         if not comment_text or comment_text.strip() == "":
-            await message.answer("❌ Комментарий не может быть пустым. Попробуйте еще раз:")
+            await processing_msg.edit_text("❌ Не удалось получить текст для комментария. Попробуйте еще раз:")
             return
+        
+        # Обновляем статус
+        await processing_msg.edit_text("💾 Сохраняю комментарий в Notion...")
         
         # Добавляем комментарий
         success = await add_comment(driver_id, comment_text)
         
         if success:
-            await processing_msg.edit_text(
-                f"✅ Комментарий успешно добавлен!\n\n"
-                f"👤 Водитель: {driver_name}\n"
-                f"💬 Комментарий: {comment_text}"
-            )
+            # Ограничиваем длину показываемого комментария
+            display_comment = comment_text[:500] + "..." if len(comment_text) > 500 else comment_text
+            
+            # Экранируем специальные символы Markdown для безопасного отображения
+            def escape_markdown(text: str) -> str:
+                """Экранирует специальные символы Markdown"""
+                chars_to_escape = ['*', '_', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!']
+                for char in chars_to_escape:
+                    text = text.replace(char, f'\\{char}')
+                return text
+            
+            escaped_comment = escape_markdown(display_comment)
+            escaped_driver_name = escape_markdown(driver_name)
+            
+            try:
+                await processing_msg.edit_text(
+                    f"✅ Комментарий успешно добавлен!\n\n"
+                    f"👤 **Водитель:** {escaped_driver_name}\n"
+                    f"📝 **Комментарий:**\n{escaped_comment}",
+                    parse_mode="Markdown"
+                )
+            except Exception as telegram_error:
+                logger.error(f"Ошибка при отправке сообщения в Telegram: {telegram_error}")
+                # Пытаемся отправить упрощенное сообщение без Markdown
+                try:
+                    await processing_msg.edit_text(
+                        f"✅ Комментарий успешно добавлен!\n\n"
+                        f"👤 Водитель: {driver_name}\n"
+                        f"📝 Комментарий:\n{display_comment}"
+                    )
+                except Exception as fallback_error:
+                    logger.error(f"Критическая ошибка при отправке сообщения: {fallback_error}")
+                    await processing_msg.edit_text("✅ Комментарий успешно добавлен в Notion!")
         else:
             await processing_msg.edit_text("❌ Не удалось добавить комментарий. Попробуйте позже.")
         
