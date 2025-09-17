@@ -2,7 +2,7 @@ from openai import AsyncOpenAI
 from config import OPENAI_KEY
 import asyncio
 from logger import logger
-# from services.openai import create_gptAnswer
+from services.openai import create_gptAnswer
 
 client = AsyncOpenAI(api_key=OPENAI_KEY)
 
@@ -21,22 +21,22 @@ async def transcription(file_path: str) -> str:
         )
     return response.text
 
-async def create_gptAnswer(message: str) -> str:
-    """Создает ответ GPT на основе транскрибированного текста"""
-    logger.info(f"Создаем ответ GPT на основе транскрибированного текста")
-    try:
-        response = await client.chat.completions.create(
-            model="gpt-4o",  # Используем доступную модель
-            messages=[
-                {"role": "system", "content": "Раздеели это транкрипцию на спикеров"},
-                {"role": "user", "content": f"Проанализируй этот звонок с водителем:\n\n{message}"}
-            ],
-        )
-        logger.info("Успешно получен ответ от GPT")
-        return response.choices[0].message.content
-    except Exception as e:
-        logger.error(f"Ошибка при создании GPT ответа: {e}")
-        raise
+# async def create_gptAnswer(message: str) -> str:
+#     """Создает ответ GPT на основе транскрибированного текста"""
+#     logger.info(f"Создаем ответ GPT на основе транскрибированного текста")
+#     try:
+#         response = await client.chat.completions.create(
+#             model="gpt-5",  # Используем доступную модель
+#             messages=[
+#                 {"role": "system", "content": "Раздеели это транкрипцию на спикеров"},
+#                 {"role": "user", "content": f"Проанализируй этот звонок с водителем:\n\n{message}"}
+#             ],
+#         )
+#         logger.info("Успешно получен ответ от GPT")
+#         return response.choices[0].message.content
+#     except Exception as e:
+#         logger.error(f"Ошибка при создании GPT ответа: {e}")
+#         raise
 
 
 
@@ -57,5 +57,5 @@ async def process_audio_to_comment(file_path: str) -> str:
         logger.error(f"Ошибка при обработке аудио: {e}")
         raise
 
-print(asyncio.run(process_audio_to_comment("../mock_audio/hr2.mp3")))
+print(asyncio.run(process_audio_to_comment("../mock_audio/hr4.mp3")))
 

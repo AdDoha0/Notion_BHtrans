@@ -128,16 +128,17 @@ async def create_gptAnswer(message: str) -> str:
     logger.info(f"Создаем ответ GPT на основе транскрибированного текста")
     try:
         response = await client.chat.completions.create(
-            model="gpt-4o",  # Используем доступную модель
+            model="gpt-4o-mini", 
             messages=[
                 {"role": "system", "content": get_promt()},
                 {"role": "user", "content": f"Проанализируй этот звонок с водителем:\n\n{message}"}
             ],
-            temperature=0.7,
             max_tokens=2000
         )
         logger.info("Успешно получен ответ от GPT")
-        return response.choices[0].message.content
+        result = response.choices[0].message.content
+        logger.info(f"Результат GPT: {len(result) if result else 0} символов")
+        return result or ""
     except Exception as e:
         logger.error(f"Ошибка при создании GPT ответа: {e}")
         raise
@@ -150,8 +151,16 @@ async def process_audio_to_comment(file_path: str) -> str:
         transcribed_text = await transcription(file_path)
         logger.info(f"Транскрибированный текст: {transcribed_text[:100]}...")
         
+        if not transcribed_text or transcribed_text.strip() == "":
+            logger.warning("Пустой результат транскрибации")
+            return "Не удалось распознать речь в аудиозаписи"
+        
         # Анализируем через GPT
         gpt_analysis = await create_gptAnswer(transcribed_text)
+        
+        if not gpt_analysis or gpt_analysis.strip() == "":
+            logger.warning("Пустой результат от GPT")
+            return f"Транскрибированный текст: {transcribed_text}"
         
         return gpt_analysis
     except Exception as e:

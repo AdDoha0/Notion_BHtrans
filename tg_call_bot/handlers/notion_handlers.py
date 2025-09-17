@@ -240,6 +240,7 @@ async def handle_comment_input(message: Message, state: FSMContext):
                 
                 # Обрабатываем аудио: транскрибация + анализ GPT
                 comment_text = await process_audio_to_comment(file_path)
+                logger.info(f"Получен результат от GPT (voice): длина={len(comment_text) if comment_text else 0}, начало='{comment_text[:100] if comment_text else 'None'}'...")
                 
                 # Удаляем временный файл
                 try:
@@ -281,6 +282,7 @@ async def handle_comment_input(message: Message, state: FSMContext):
                 
                 # Обрабатываем аудио: транскрибация + анализ GPT
                 comment_text = await process_audio_to_comment(file_path)
+                logger.info(f"Получен результат от GPT (document): длина={len(comment_text) if comment_text else 0}, начало='{comment_text[:100] if comment_text else 'None'}'...")
                 
                 # Удаляем временный файл
                 try:
@@ -298,6 +300,7 @@ async def handle_comment_input(message: Message, state: FSMContext):
             return
         
         if not comment_text or comment_text.strip() == "":
+            logger.warning(f"Пустой комментарий: comment_text={repr(comment_text)}")
             await processing_msg.edit_text("❌ Не удалось получить текст для комментария. Попробуйте еще раз:")
             return
         

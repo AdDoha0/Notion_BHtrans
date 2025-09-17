@@ -46,10 +46,6 @@ def get_admin_keyboard():
 def get_prompt_keyboard():
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="📝 Основной промт", callback_data="admin_prompt_main"),
-            InlineKeyboardButton(text="📋 Шаблон ответа", callback_data="admin_prompt_template")
-        ],
-        [
             InlineKeyboardButton(text="👁️ Текущий промт", callback_data="admin_prompt_view"),
             InlineKeyboardButton(text="👁️ Текущий шаблон", callback_data="admin_template_view")
         ],
