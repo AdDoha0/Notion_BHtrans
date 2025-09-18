@@ -10,7 +10,10 @@ import sys
 # Добавляем путь к модулям
 sys.path.append(os.path.join(os.path.dirname(__file__), 'tg_call_bot'))
 
-from tg_call_bot.services.openai import process_audio_to_comment, transcription, create_gptAnswer
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tg_call_bot'))
+from modules.openai.client import process_audio_to_comment, transcription, create_gptAnswer
 
 async def test_audio_processing():
     """Тест обработки аудио файла"""

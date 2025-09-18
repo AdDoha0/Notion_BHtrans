@@ -1,8 +1,8 @@
 from openai import AsyncOpenAI
-from config import OPENAI_KEY
+from share.config import OPENAI_KEY
 import asyncio
 from logger import logger
-from services.openai import create_gptAnswer
+from modules.openai.client import create_gptAnswer
 
 client = AsyncOpenAI(api_key=OPENAI_KEY)
 

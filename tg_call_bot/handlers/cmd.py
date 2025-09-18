@@ -1,10 +1,11 @@
 from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
-from config import ADMINS
+from share.config import ADMINS
 
 
 async def cmd_start(message: Message):
+    # await message.answer_photo
     await message.answer(
         "Ассаламу алейкум! я ваш бот для анализации звонков\n"
         "Используйте /help для получения списка команд."
@@ -33,7 +34,6 @@ async def cmd_help(message: Message):
 
 
 def register_handlers(dp: Dispatcher):
-    """Регистрация всех обработчиков"""
     
     # Регистрация команд
     dp.message.register(cmd_start, Command("start"))

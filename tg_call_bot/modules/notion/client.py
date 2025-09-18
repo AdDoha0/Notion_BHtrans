@@ -4,7 +4,7 @@ from typing import List, Dict, Optional, Tuple
 from notion_client import AsyncClient
 import logging
 
-from config import NOTION_KEY, NOTION_DATABASE_ID
+from share.config import NOTION_KEY, NOTION_DATABASE_ID
 
 # Настройка логирования
 logger = logging.getLogger(__name__)

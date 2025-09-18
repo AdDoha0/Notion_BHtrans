@@ -2,24 +2,19 @@ from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
 import logging
 import psutil
 import os
 from datetime import datetime
 
-from config import ADMINS
-from services.openai import get_main_prompt, get_response_template, save_main_prompt, save_response_template
+from share.config import ADMINS
+from share.promt_utils import get_main_prompt, get_response_template, save_main_prompt, save_response_template
+from .states import AdminStates
 
 logger = logging.getLogger(__name__)
 
 router = Router()
 
-# Состояния для админ панели
-class AdminStates(StatesGroup):
-    waiting_for_broadcast = State()
-    waiting_for_main_prompt = State()
-    waiting_for_response_template = State()
 
 # Проверка админских прав
 def is_admin(user_id: int) -> bool:

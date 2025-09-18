@@ -9,11 +9,10 @@ from aiogram.client.session.aiohttp import AiohttpSession
 from aiohttp import web
 import aiohttp
 
-from config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
+from share.config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
 from handlers.cmd import register_handlers
-from handlers.handlers import router
-from handlers.notion_handlers import router as notion_router
-from admin.handlers import router as admin_router
+from modules.notion.handlers import router as notion_router
+from modules.admin.handlers import router as admin_router
 
 
 # Настройка логирования
@@ -34,8 +33,6 @@ async def main():
     dp.include_router(admin_router)
     # Подключаем обработчики Notion
     dp.include_router(notion_router)
-    # Подключаем общие обработчики (пустой роутер)
-    dp.include_router(router)
     
     # Регистрация обработчиков
     register_handlers(dp)
