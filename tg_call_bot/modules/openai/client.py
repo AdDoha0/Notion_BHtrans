@@ -53,15 +53,13 @@ async def create_gptAnswer(
 
 
 
-async def process_audio(file_path: str, system_promt: str, model: str = "gpt-4o", max_tokens: int = 3000) -> str:
-    """Полный процесс: транскрибация + анализ GPT"""
+async def analyze_transcribed_text(transcribed_text: str, system_promt: str, model: str = "gpt-4o", max_tokens: int = 3000) -> str:
+    """Анализирует транскрибированный текст через GPT"""
     try:
-        # Транскрибируем аудио
-        transcribed_text = await transcription(file_path)
-        logger.info(f"Транскрибированный текст: {transcribed_text[:100]}...")
+        logger.info(f"Анализируем транскрибированный текст: {transcribed_text[:100]}...")
         
         if not transcribed_text or transcribed_text.strip() == "":
-            logger.warning("Пустой результат транскрибации")
+            logger.warning("Пустой текст для анализа")
             return "Не удалось распознать речь в аудиозаписи"
         
         # Анализируем через GPT
@@ -78,7 +76,10 @@ async def process_audio(file_path: str, system_promt: str, model: str = "gpt-4o"
         
         return gpt_analysis
     except Exception as e:
-        logger.error(f"Ошибка при обработке аудио: {e}")
+        logger.error(f"Ошибка при анализе текста: {e}")
         raise
+
+
+
 
 

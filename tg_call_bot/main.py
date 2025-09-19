@@ -13,6 +13,7 @@ from share.config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
 from handlers.cmd import register_handlers
 from modules.notion.handlers import router as notion_router
 from modules.admin.handlers import router as admin_router
+from modules.openai.handlers import router as openai_router
 
 
 # Настройка логирования
@@ -33,6 +34,8 @@ async def main():
     dp.include_router(admin_router)
     # Подключаем обработчики Notion
     dp.include_router(notion_router)
+    # Подключаем обработчики OpenAI
+    dp.include_router(openai_router)
     
     # Регистрация обработчиков
     register_handlers(dp)

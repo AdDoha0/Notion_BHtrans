@@ -84,17 +84,21 @@ async def handle_comment_input(message: Message, state: FSMContext):
         # VOICE
         elif message.voice:
             processing = await message.answer("🎙️ Обрабатываю аудио...")
-            comment_text = await transcribe_file(message.bot, message.voice.file_id, "voice.ogg")
+            from share.promt_utils import get_promt_call_analyze
+            system_prompt = get_promt_call_analyze()
+            comment_text = await transcribe_file(message.bot, message.voice.file_id, "voice.ogg", system_prompt)
             await processing.edit_text("💾 Сохраняю комментарий в Notion...")
 
         # AUDIO/DOCUMENT
         elif message.audio or message.document:
             processing = await message.answer("🎙️ Обрабатываю аудиофайл...")
+            from share.promt_utils import get_promt_call_analyze
+            system_prompt = get_promt_call_analyze()
             if message.audio:
-                comment_text = await transcribe_file(message.bot, message.audio.file_id, message.audio.file_name or "audio.mp3")
+                comment_text = await transcribe_file(message.bot, message.audio.file_id, message.audio.file_name or "audio.mp3", system_prompt)
             else:
                 name = message.document.file_name or "audio.mp3"
-                comment_text = await transcribe_file(message.bot, message.document.file_id, name)
+                comment_text = await transcribe_file(message.bot, message.document.file_id, name, system_prompt)
             await processing.edit_text("💾 Сохраняю комментарий в Notion...")
 
         else:
