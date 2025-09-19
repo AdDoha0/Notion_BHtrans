@@ -1,10 +1,8 @@
 from openai import AsyncOpenAI
 from share.config import OPENAI_KEY
-import asyncio
-import os
 import logging
 
-from share.promt_utils import get_promt
+from share.promt_utils import get_promt_call_analyze
 
 logger = logging.getLogger(__name__)
 
@@ -26,17 +24,23 @@ async def transcription(file_path: str) -> str:
         logger.error(f"Ошибка при транскрибации файла {file_path}: {e}")
         raise
 
-async def create_gptAnswer(message: str) -> str:
+
+async def create_gptAnswer(
+        message: str,
+        system_promt: str,
+        model: str = "gpt-4o",
+        max_tokens: int = 2000,
+                           ) -> str:
     """Создает ответ GPT на основе транскрибированного текста"""
     logger.info(f"Создаем ответ GPT на основе транскрибированного текста")
     try:
         response = await client.chat.completions.create(
-            model="gpt-4o-mini", 
+            model=model, 
             messages=[
-                {"role": "system", "content": get_promt()},
-                {"role": "user", "content": f"Проанализируй этот звонок с водителем:\n\n{message}"}
+                {"role": "system", "content": system_promt},
+                {"role": "user", "content": f"{message}"}
             ],
-            max_tokens=2000
+            max_tokens=max_tokens
         )
         logger.info("Успешно получен ответ от GPT")
         result = response.choices[0].message.content
@@ -47,7 +51,9 @@ async def create_gptAnswer(message: str) -> str:
         raise
 
 
-async def process_audio_to_comment(file_path: str) -> str:
+
+
+async def process_audio(file_path: str, system_promt: str, model: str = "gpt-4o", max_tokens: int = 3000) -> str:
     """Полный процесс: транскрибация + анализ GPT"""
     try:
         # Транскрибируем аудио
@@ -59,7 +65,12 @@ async def process_audio_to_comment(file_path: str) -> str:
             return "Не удалось распознать речь в аудиозаписи"
         
         # Анализируем через GPT
-        gpt_analysis = await create_gptAnswer(transcribed_text)
+        gpt_analysis = await create_gptAnswer(
+            transcribed_text,
+            system_promt=system_promt,
+            model=model,
+            max_tokens=max_tokens
+        )
         
         if not gpt_analysis or gpt_analysis.strip() == "":
             logger.warning("Пустой результат от GPT")

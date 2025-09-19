@@ -2,7 +2,7 @@ from openai import AsyncOpenAI
 from share.config import OPENAI_KEY
 import asyncio
 from logger import logger
-from modules.openai.client import create_gptAnswer
+from modules.openai.client import create_gptAnswer, process_audio
 
 client = AsyncOpenAI(api_key=OPENAI_KEY)
 
@@ -42,20 +42,24 @@ async def transcription(file_path: str) -> str:
 
 
 
-async def process_audio_to_comment(file_path: str) -> str:
-    """Полный процесс: транскрибация + анализ GPT"""
-    try:
-        # Транскрибируем аудио
-        transcribed_text = await transcription(file_path)
-        logger.info(f"Транскрибированный текст: {transcribed_text[:100]}...")
-        
-        # Анализируем через GPT
-        gpt_analysis = await create_gptAnswer(transcribed_text)
-        
-        return gpt_analysis
-    except Exception as e:
-        logger.error(f"Ошибка при обработке аудио: {e}")
-        raise
+# Старая функция заменена на process_audio из modules.openai.client
+# async def process_audio_to_comment(file_path: str) -> str:
+#     """Полный процесс: транскрибация + анализ GPT"""
+#     try:
+#         # Транскрибируем аудио
+#         transcribed_text = await transcription(file_path)
+#         logger.info(f"Транскрибированный текст: {transcribed_text[:100]}...")
+#         
+#         # Анализируем через GPT
+#         gpt_analysis = await create_gptAnswer(transcribed_text)
+#         
+#         return gpt_analysis
+#     except Exception as e:
+#         logger.error(f"Ошибка при обработке аудио: {e}")
+#         raise
 
-print(asyncio.run(process_audio_to_comment("../mock_audio/hr4.mp3")))
+# Теперь используем новую функцию process_audio
+# Для тестирования нужно добавить system_promt
+system_prompt = "Проанализируй этот звонок с водителем и создай краткое резюме."
+print(asyncio.run(process_audio("../mock_audio/hr4.mp3", system_prompt)))
 

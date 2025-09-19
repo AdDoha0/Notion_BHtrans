@@ -12,8 +12,8 @@ DEFAULT_MAIN = "Ты HR-эксперт. Проанализируй звонок 
 DEFAULT_TEMPLATE = "Стандартный шаблон ответа недоступен."
 
 # корень — как у тебя: на уровень выше текущего файла
-_MAIN_PATH = Path(__file__).parent.parent / "promts" / "prompt_main.txt"
-_TEMPLATE_PATH = Path(__file__).parent.parent / "promts" / "template_response.txt"
+_MAIN_PATH = Path(__file__).parent.parent / "promts" / "call_analyze" / "prompt_main.txt"
+_TEMPLATE_PATH = Path(__file__).parent.parent / "promts" / "call_analyze" / "template_response.txt"
 _ENCODING = "utf-8"
 
 
@@ -60,7 +60,7 @@ def get_main_prompt() -> str:
 def get_response_template() -> str:
     return _read_with_default(_TEMPLATE_PATH, DEFAULT_TEMPLATE)
 
-def get_promt() -> str:
+def get_promt_call_analyze() -> str:
     # не кэшируем склейку отдельно — кэш есть на частях
     return f"{get_main_prompt()}\n\n{get_response_template()}"
 
