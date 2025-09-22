@@ -1,19 +1,21 @@
 from aiogram import Router, F
 from aiogram.filters import Command
-from aiogram.types import Message
+from aiogram.types import Message, FSInputFile
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
+
+import logging
+import os
+import tempfile
 
 from share.usecases import transcribe_file
 from share.promt_utils import get_promt_call_analyze
-import logging
+from .state import AudioStates
+from .client import create_gptAnswer
 
 logger = logging.getLogger(__name__)
 router = Router()
 
-class AudioStates(StatesGroup):
-    waiting_for_audio_transcribe = State()
-    waiting_for_audio_summary = State()
+
 
 @router.message(Command("transcribe"))
 async def cmd_transcribe(message: Message, state: FSMContext):
@@ -33,12 +35,16 @@ async def cmd_call_summary(message: Message, state: FSMContext):
     )
     await state.set_state(AudioStates.waiting_for_audio_summary)
 
+# --- Обработка аудио для транскрибации ---
+
 @router.message(AudioStates.waiting_for_audio_transcribe)
 async def handle_transcribe_audio(message: Message, state: FSMContext):
     """Обработка аудио для транскрибации"""
     if not (message.voice or message.audio or message.document):
         await message.answer("❌ Пожалуйста, отправьте аудиофайл")
         return
+    
+    logger.info(f"Обработка аудио для транскрибации")
     
     processing = await message.answer("🎙️ Транскрибирую аудио...")
     
@@ -61,18 +67,36 @@ async def handle_transcribe_audio(message: Message, state: FSMContext):
         Спикер 1: [текст]
         Спикер 2: [текст]
         
-        Если не можешь определить спикеров, просто верни полную транскрипцию."""
+        """
         
-        result = await process_audio(
+        result = await transcribe_file(
             message.bot, 
             file_id, 
-            filename, 
-            system_prompt,
-            model="gpt-4o",
-            max_tokens=3000
+            filename,
+            system_prompt
         )
+
+        # Создаем временный файл с результатом транскрипции
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as temp_file:
+            temp_file.write(f"🎙️ Транскрипция аудиофайла\n")
+            temp_file.write(f"Файл: {filename}\n")
+            temp_file.write("=" * 50 + "\n\n")
+            temp_file.write(result)
+            temp_file_path = temp_file.name
         
-        await processing.edit_text(f"✅ Транскрипция готова:\n\n{result}")
+        try:
+            # Отправляем файл пользователю
+            document = FSInputFile(temp_file_path, filename="transcription.txt")
+            await message.answer_document(
+                document=document,
+                caption="✅ Транскрипция готова! Результат в файле."
+            )
+            await processing.delete()
+            
+        finally:
+            # Удаляем временный файл
+            if os.path.exists(temp_file_path):
+                os.unlink(temp_file_path)
         
     except Exception as e:
         logger.error(f"Ошибка при транскрибации: {e}")
@@ -111,7 +135,27 @@ async def handle_summary_audio(message: Message, state: FSMContext):
             system_prompt
         )
         
-        await processing.edit_text(f"✅ Анализ звонка готов:\n\n{result}")
+        # Создаем временный файл с результатом анализа
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False, encoding='utf-8') as temp_file:
+            temp_file.write(f"📞 Анализ звонка\n")
+            temp_file.write(f"Файл: {filename}\n")
+            temp_file.write("=" * 50 + "\n\n")
+            temp_file.write(result)
+            temp_file_path = temp_file.name
+        
+        try:
+            # Отправляем файл пользователю
+            document = FSInputFile(temp_file_path, filename="call_analysis.txt")
+            await message.answer_document(
+                document=document,
+                caption="✅ Анализ звонка готов! Результат в файле."
+            )
+            await processing.delete()
+            
+        finally:
+            # Удаляем временный файл
+            if os.path.exists(temp_file_path):
+                os.unlink(temp_file_path)
         
     except Exception as e:
         logger.error(f"Ошибка при анализе звонка: {e}")
