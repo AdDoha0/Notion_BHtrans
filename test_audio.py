@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-Тестовый скрипт для проверки обработки аудио
-"""
+
 
 import asyncio
 import os
@@ -13,7 +10,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'tg_call_bot'))
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), 'tg_call_bot'))
-from modules.openai.client import process_audio_to_comment, transcription, create_gptAnswer
+# from modules.openai.client import process_audio_to_comment, transcription, create_gptAnswer
 
 async def test_audio_processing():
     """Тест обработки аудио файла"""

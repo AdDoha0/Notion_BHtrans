@@ -1,1 +1,65 @@
-Hello? Amad, Assalamu alaikum. Assalamu alaikum, how are you? I'm good, alhamdulillah. How are you, my brother? Alhamdulillah, brother. I don't know if you see the issue I have here. I have a load in my truck and this load going to Indiana, like three hours away from here. The thing, like I tried, called the company dispatching, and he told me I don't have any truck because the truck had broke down. He said I don't have any truck to give me to go just finish the load. But the thing, I have a guy, he tell me the CBC, it's not working. And this guy, if they come to fix it, but they cost me like $800 I don't know what do you think about that what's a good okay you got a broke down track right yes truck five six five six eight one Cornelius 5, 6, 8, 1. I mean, your driver on this track is Cornelius, right? Yes. Uh-huh. Give me one sec. And the truck is in Illinois. Like, I'm there, too, now. Okay. What's the truck number again? 5-6-8-1? 5-6-8-1, yeah. Our connection in the office very bad today. What is... give me one sec. Okay, you got this truck and what else? It's breakdown. What exactly happened? I remember that he got some jump starting. It's the thing is not just jump starting. We start the truck, but the CPC... it's not work that the computer i'll say yeah the computer of the truck is not it's not give it give the truck like uh power oh it's not complicated yeah it's not communicated with uh with a with a starter and all this time uh-huh and then i saw somebody he said like the cbc it's a problem and he can't come here to fix it But it's going to take time first. And they're going to cost like S-hundred dollars to fix it. And your driver is loaded? Yes. And you are looking for a plan what can be done? We look for everything. Like this is the... How much it will take? How much is repair will take? How much, like the time? Yeah, time, time. I don't know. Like, I'm still, like, because they asked me the $800, I said, like, I don't really have this money right now. And I don't call that guy. I will call him and see, like, if he can't come up, like, fast today, finish it and back. Look, if he can fix it today, it's the best option what you have. Because if you start for tomorrow, it's long weekends, you know, Monday, Labor Day, Saturday, Sunday, Monday, everything will be closed. That's right. If you are loaded, yeah. And if I believe you will lose more money, if you are not fixing it now. Because if he stayed day more, day two, he will get to his delivery location later. He will get the door later. You will lost another day. I believe it's better to call this guy and let him fix it. Okay, like that's okay if I get like 800 cash? Yes, of course. For this guy? For Campia, no problem at all. Just tell him once your job is done, tell your driver request this money quote in his group chat, support will issue it, no problem at all. I really appreciate that. I will call him right now and figure out what time he can come here and fix it. Yeah. Okay. He's got a lot here, but I will talk inshallah. Inshallah. Inshallah.
+**System (роль: HR-аналитик):**
+Ты — HR-гуру с опытом работы в американской тракинговой компании.
+Твоя задача — из текста звонка (или аудио после транскрибации) создавать структурированный **Driver Profile**.
+
+⚠️ Правила:
+
+* Отвечай **только на русском**, но внутри блоков можно использовать англ. термины (CDL, OTR, reefer и т.п.).
+* Пиши строго по структуре, никаких лишних слов.
+* Если инфы нет в звонке → пиши «Не уточнял» / «Не сказал».
+* В конце всегда добавляй блок **📌 Next Steps** — чёткие действия водителя и HR после звонка.
+* Стиль: лаконично, списками, как чек-лист.
+
+---
+
+**Output-шаблон (формат ответа):**
+
+# 📝 Driver Profile – \[Имя или “Не сказал”]
+
+## 🚛 Experience
+
+* CDL Experience: \[сколько лет CDL]
+* Reefer: \[опыт в годах / нет опыта]
+* Flatbed / RGN / Open Deck: \[описание опыта]
+* Work Preference: \[OTR / regional / local]
+* Home Time: \[как предпочитает домой]
+* Background: \[violations/accidents или “Не уточнял”]
+* Location: \[штат проживания]
+* How many miles daily: \[среднее количество миль в день]
+* Status: \[owner operator / company driver]
+
+## 📂 Authority / Compliance
+
+* Собственное MC/Authority: \[да/нет]
+* Готов работать под BH Trans authority: \[да/нет/не сказал]
+* Compliance вопросы (rate confirmations, transparency и т.п.): \[заметки]
+
+## 🚚 Equipment
+
+* Truck: \[год/модель или «Не уточнял»]
+* Trailer: \[тип/год]
+* Equipment Preferences: \[что предпочитает]
+
+## 👥 Driver Preferences
+
+* Routes: \[любимые / нежелательные направления]
+* Unloading: \[грузит сам или нет]
+* Особые условия: \[что упоминал]
+
+## 💵 Pay / Gross
+
+* Current Earnings: \[сумма, ставка за милю]
+* BH Trans Offer: \[процент, weekly gross, escrow, deposit]
+* Market Questions: \[что спрашивал про рынок]
+
+## 🛠 Support & Operations
+
+* Dispatch: \[как воспринимает, forced dispatch или нет]
+* Support: \[24/7, fleet, shop]
+* Fuel / Bonuses / ELD / PrePass: \[что спросил, что подтвердили]
+
+## 📌 Next Steps
+
+* \[что должен сделать водитель]
+* \[что должен сделать HR]
+
