@@ -1,13 +1,12 @@
 from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart
-from aiogram.types import Message
+from aiogram.types import Message, FSInputFile
 from share.config import ADMINS
 
-
 async def cmd_start(message: Message):
-    # await message.answer_photo
-    await message.answer(
-        "Ассаламу алейкум! я ваш бот для анализации звонков\n"
+    await message.answer_photo(
+        photo=FSInputFile("assets/logo.png"),
+        caption="Я ваш бот для анализации звонков!\n"
         "Используйте /help для получения списка команд."
     )
 
@@ -21,7 +20,7 @@ async def cmd_help(message: Message):
 /help - Показать это сообщение
 /drivers - Показать список водителей
 /call_summary - Суммаризация звонка
-/transcribe - Транскрибация аудио (по спикерам)
+/transcribe - Транскрибация аудио по спикерам (работает коректно с двумя спикерами)
 """
     
     # Добавляем админские команды для администраторов
@@ -29,7 +28,7 @@ async def cmd_help(message: Message):
         help_text += "\n🔧 <b>Команды администратора:</b>\n"
         help_text += "/admin - Панель администратора\n"
     
-    help_text += "\nДля получения дополнительной информации обратитесь к администратору."
+    help_text += "\nПо всем вопросам обращайтесь к разработчику @dohaAdam1"
     
     await message.answer(help_text)
 

@@ -8,7 +8,10 @@ import os
 from datetime import datetime
 
 from share.config import ADMINS
-from share.promt_utils import get_main_prompt, get_response_template, save_main_prompt, save_response_template
+from share.promt_utils import (
+    get_main_prompt, get_response_template, save_main_prompt, save_response_template,
+    get_summary_main_prompt, get_summary_template, save_summary_main_prompt, save_summary_template
+)
 from .states import AdminStates
 
 logger = logging.getLogger(__name__)
@@ -41,11 +44,45 @@ def get_admin_keyboard():
 def get_prompt_keyboard():
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
+            InlineKeyboardButton(text="🔍 Анализ звонков", callback_data="admin_analyze_menu")
+        ],
+        [
+            InlineKeyboardButton(text="👤 Профиль водителя", callback_data="admin_summary_menu")
+        ],
+        [
+            InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back")
+        ]
+    ])
+    return keyboard
+
+def get_analyze_menu_keyboard():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
             InlineKeyboardButton(text="👁️ Текущий промт", callback_data="admin_prompt_view"),
             InlineKeyboardButton(text="👁️ Текущий шаблон", callback_data="admin_template_view")
         ],
         [
-            InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back")
+            InlineKeyboardButton(text="✏️ Изменить промт", callback_data="admin_prompt_main"),
+            InlineKeyboardButton(text="✏️ Изменить шаблон", callback_data="admin_prompt_template")
+        ],
+        [
+            InlineKeyboardButton(text="🔙 Назад", callback_data="admin_prompt")
+        ]
+    ])
+    return keyboard
+
+def get_summary_menu_keyboard():
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text="👁️ Текущий промт", callback_data="admin_summary_prompt_view"),
+            InlineKeyboardButton(text="👁️ Текущий шаблон", callback_data="admin_summary_template_view")
+        ],
+        [
+            InlineKeyboardButton(text="✏️ Изменить промт", callback_data="admin_summary_prompt_main"),
+            InlineKeyboardButton(text="✏️ Изменить шаблон", callback_data="admin_summary_prompt_template")
+        ],
+        [
+            InlineKeyboardButton(text="🔙 Назад", callback_data="admin_prompt")
         ]
     ])
     return keyboard
@@ -97,6 +134,18 @@ async def admin_callback_handler(callback: CallbackQuery, state: FSMContext):
         await view_current_prompt(callback)
     elif action == "admin_template_view":
         await view_current_template(callback)
+    elif action == "admin_analyze_menu":
+        await show_analyze_menu(callback)
+    elif action == "admin_summary_menu":
+        await show_summary_menu(callback)
+    elif action == "admin_summary_prompt_view":
+        await view_current_summary_prompt(callback)
+    elif action == "admin_summary_template_view":
+        await view_current_summary_template(callback)
+    elif action == "admin_summary_prompt_main":
+        await edit_summary_main_prompt(callback, state)
+    elif action == "admin_summary_prompt_template":
+        await edit_summary_response_template(callback, state)
 
 async def show_stats(callback: CallbackQuery):
     """Показать статистику бота"""
@@ -340,6 +389,146 @@ async def process_response_template(message: Message, state: FSMContext):
     else:
         await message.answer("❌ Ошибка при сохранении шаблона. Попробуйте еще раз.")
         logger.error(f"Ошибка сохранения шаблона от админа {message.from_user.id}")
+    
+    await state.clear()
+
+# --- Функции для управления суммаризацией ---
+
+async def show_analyze_menu(callback: CallbackQuery):
+    """Показать меню управления промтами анализа звонков"""
+    text = """
+🔍 <b>Управление анализом звонков</b>
+
+Настройка промптов для анализа звонков с водителями.
+Выберите что вы хотите изменить или посмотреть.
+"""
+    await callback.message.edit_text(text, reply_markup=get_analyze_menu_keyboard())
+
+async def show_summary_menu(callback: CallbackQuery):
+    """Показать меню управления промтами суммаризации"""
+    text = """
+👤 <b>Управление профилем водителя</b>
+
+Настройка промптов для создания профиля водителя из звонков.
+Выберите что вы хотите изменить или посмотреть.
+"""
+    await callback.message.edit_text(text, reply_markup=get_summary_menu_keyboard())
+
+async def view_current_summary_prompt(callback: CallbackQuery):
+    """Показать текущий промт суммаризации"""
+    current_prompt = get_summary_main_prompt()
+    
+    text = f"""
+📝 <b>Текущий промт для профиля водителя</b>
+
+<code>{current_prompt}</code>
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="✏️ Изменить", callback_data="admin_summary_prompt_main")],
+        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_summary_menu")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+async def view_current_summary_template(callback: CallbackQuery):
+    """Показать текущий шаблон суммаризации"""
+    current_template = get_summary_template()
+    
+    text = f"""
+📋 <b>Текущий шаблон профиля водителя</b>
+
+<code>{current_template}</code>
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="✏️ Изменить", callback_data="admin_summary_prompt_template")],
+        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_summary_menu")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+async def edit_summary_main_prompt(callback: CallbackQuery, state: FSMContext):
+    """Начать редактирование промта суммаризации"""
+    current_prompt = get_summary_main_prompt()
+    
+    text = f"""
+📝 <b>Редактирование промта профиля водителя</b>
+
+<b>Текущий промт:</b>
+<code>{current_prompt}</code>
+
+Отправьте новый промт следующим сообщением.
+Для отмены используйте /cancel
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_summary_menu")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_summary_main_prompt)
+
+async def edit_summary_response_template(callback: CallbackQuery, state: FSMContext):
+    """Начать редактирование шаблона суммаризации"""
+    current_template = get_summary_template()
+    
+    text = f"""
+📋 <b>Редактирование шаблона профиля водителя</b>
+
+<b>Текущий шаблон:</b>
+<code>{current_template}</code>
+
+Отправьте новый шаблон следующим сообщением.
+Для отмены используйте /cancel
+    """
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_summary_menu")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_summary_template)
+
+@router.message(AdminStates.waiting_for_summary_main_prompt)
+async def process_summary_main_prompt(message: Message, state: FSMContext):
+    """Обработка нового промта суммаризации"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    new_prompt = message.text.strip()
+    
+    if save_summary_main_prompt(new_prompt):
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="🔙 К управлению промтами", callback_data="admin_summary_menu")],
+            [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+        ])
+        await message.answer("✅ Промт профиля водителя успешно обновлен!", reply_markup=keyboard)
+        logger.info(f"Админ {message.from_user.id} обновил промт суммаризации")
+    else:
+        await message.answer("❌ Ошибка при сохранении промта. Попробуйте еще раз.")
+        logger.error(f"Ошибка сохранения промта суммаризации от админа {message.from_user.id}")
+    
+    await state.clear()
+
+@router.message(AdminStates.waiting_for_summary_template)
+async def process_summary_template(message: Message, state: FSMContext):
+    """Обработка нового шаблона суммаризации"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    new_template = message.text.strip()
+    
+    if save_summary_template(new_template):
+        keyboard = InlineKeyboardMarkup(inline_keyboard=[
+            [InlineKeyboardButton(text="🔙 К управлению промтами", callback_data="admin_summary_menu")],
+            [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+        ])
+        await message.answer("✅ Шаблон профиля водителя успешно обновлен!", reply_markup=keyboard)
+        logger.info(f"Админ {message.from_user.id} обновил шаблон суммаризации")
+    else:
+        await message.answer("❌ Ошибка при сохранении шаблона. Попробуйте еще раз.")
+        logger.error(f"Ошибка сохранения шаблона суммаризации от админа {message.from_user.id}")
     
     await state.clear()
 

@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 # Загружаем переменные окружения из .env файла
 load_dotenv()
 
+
+ALLOWED_USERS = [6979740321, 1922352366]
+
 # Настройки бота
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:

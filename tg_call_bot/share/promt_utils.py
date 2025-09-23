@@ -10,10 +10,14 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_MAIN = "Ты HR-эксперт. Проанализируй звонок с водителем и дай профессиональный отчет."
 DEFAULT_TEMPLATE = "Стандартный шаблон ответа недоступен."
+DEFAULT_SUMMARY_MAIN = "Ты HR-аналитик. Создай структурированный Driver Profile из звонка с водителем."
+DEFAULT_SUMMARY_TEMPLATE = "Стандартный шаблон профиля водителя недоступен."
 
 # корень — как у тебя: на уровень выше текущего файла
 _MAIN_PATH = Path(__file__).parent.parent / "promts" / "call_analyze" / "prompt_main.txt"
 _TEMPLATE_PATH = Path(__file__).parent.parent / "promts" / "call_analyze" / "template_response.txt"
+_SUMMARY_MAIN_PATH = Path(__file__).parent.parent / "promts" / "call_sumary" / "promt_main.txt"
+_SUMMARY_TEMPLATE_PATH = Path(__file__).parent.parent / "promts" / "call_sumary" / "template_response.txt"
 _ENCODING = "utf-8"
 
 
@@ -75,4 +79,30 @@ def save_response_template(content: str) -> bool:
     ok = _write_text(_TEMPLATE_PATH, content)
     if ok:
         get_response_template.cache_clear()
+    return ok
+
+# --- Функции для суммаризации ---
+
+@lru_cache(maxsize=2)
+def get_summary_main_prompt() -> str:
+    return _read_with_default(_SUMMARY_MAIN_PATH, DEFAULT_SUMMARY_MAIN)
+
+@lru_cache(maxsize=2)
+def get_summary_template() -> str:
+    return _read_with_default(_SUMMARY_TEMPLATE_PATH, DEFAULT_SUMMARY_TEMPLATE)
+
+def get_promt_call_summary() -> str:
+    # не кэшируем склейку отдельно — кэш есть на частях
+    return f"{get_summary_main_prompt()}\n\n{get_summary_template()}"
+
+def save_summary_main_prompt(content: str) -> bool:
+    ok = _write_text(_SUMMARY_MAIN_PATH, content)
+    if ok:
+        get_summary_main_prompt.cache_clear()
+    return ok
+
+def save_summary_template(content: str) -> bool:
+    ok = _write_text(_SUMMARY_TEMPLATE_PATH, content)
+    if ok:
+        get_summary_template.cache_clear()
     return ok
