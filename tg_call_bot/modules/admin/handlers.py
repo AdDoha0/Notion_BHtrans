@@ -12,6 +12,9 @@ from share.promt_utils import (
     get_main_prompt, get_response_template, save_main_prompt, save_response_template,
     get_summary_main_prompt, get_summary_template, save_summary_main_prompt, save_summary_template
 )
+from share.utils import (
+    add_allowed_user, remove_allowed_user, get_allowed_users_list, is_allowed_user
+)
 from .states import AdminStates
 
 logger = logging.getLogger(__name__)
@@ -33,6 +36,9 @@ def get_admin_keyboard():
         [
             InlineKeyboardButton(text="🤖 Промт", callback_data="admin_prompt"),
             InlineKeyboardButton(text="📋 Логи", callback_data="admin_logs")
+        ],
+        [
+            InlineKeyboardButton(text="👥 Пользователи", callback_data="admin_users")
         ],
         [
             InlineKeyboardButton(text="❌ Закрыть", callback_data="admin_close")
@@ -146,6 +152,14 @@ async def admin_callback_handler(callback: CallbackQuery, state: FSMContext):
         await edit_summary_main_prompt(callback, state)
     elif action == "admin_summary_prompt_template":
         await edit_summary_response_template(callback, state)
+    elif action == "admin_users":
+        await show_users_menu(callback)
+    elif action == "admin_users_list":
+        await show_allowed_users(callback)
+    elif action == "admin_users_add":
+        await start_add_user(callback, state)
+    elif action == "admin_users_remove":
+        await start_remove_user(callback, state)
 
 async def show_stats(callback: CallbackQuery):
     """Показать статистику бота"""
@@ -529,6 +543,121 @@ async def process_summary_template(message: Message, state: FSMContext):
     else:
         await message.answer("❌ Ошибка при сохранении шаблона. Попробуйте еще раз.")
         logger.error(f"Ошибка сохранения шаблона суммаризации от админа {message.from_user.id}")
+    
+    await state.clear()
+
+# Функции управления пользователями
+async def show_users_menu(callback: CallbackQuery):
+    """Показать меню управления пользователями"""
+    text = "👥 <b>Управление пользователями</b>\n\n"
+    text += "Выберите действие:"
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="📋 Список разрешённых", callback_data="admin_users_list")],
+        [
+            InlineKeyboardButton(text="➕ Добавить", callback_data="admin_users_add"),
+            InlineKeyboardButton(text="➖ Удалить", callback_data="admin_users_remove")
+        ],
+        [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+
+async def show_allowed_users(callback: CallbackQuery):
+    """Показать список разрешённых пользователей"""
+    users = get_allowed_users_list()
+    
+    text = "📋 <b>Разрешённые пользователи:</b>\n\n"
+    
+    if users:
+        for i, user_id in enumerate(users, 1):
+            text += f"{i}. ID: <code>{user_id}</code>\n"
+    else:
+        text += "❌ Список пуст"
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+
+
+async def start_add_user(callback: CallbackQuery, state: FSMContext):
+    """Начать процесс добавления пользователя"""
+    text = "➕ <b>Добавление пользователя</b>\n\n"
+    text += "Отправьте ID пользователя (число), которого нужно добавить в список разрешённых.\n\n"
+    text += "💡 <i>Чтобы узнать ID пользователя, попросите его написать боту @userinfobot</i>"
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_users")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_user_id_to_add)
+
+
+async def start_remove_user(callback: CallbackQuery, state: FSMContext):
+    """Начать процесс удаления пользователя"""
+    text = "➖ <b>Удаление пользователя</b>\n\n"
+    text += "Отправьте ID пользователя (число), которого нужно удалить из списка разрешённых."
+    
+    keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="❌ Отмена", callback_data="admin_users")]
+    ])
+    
+    await callback.message.edit_text(text, reply_markup=keyboard)
+    await state.set_state(AdminStates.waiting_for_user_id_to_remove)
+
+
+@router.message(AdminStates.waiting_for_user_id_to_add)
+async def process_add_user(message: Message, state: FSMContext):
+    """Обработка добавления пользователя"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    try:
+        user_id = int(message.text.strip())
+        
+        if add_allowed_user(user_id):
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")],
+                [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+            ])
+            await message.answer(f"✅ Пользователь {user_id} добавлен в список разрешённых!", reply_markup=keyboard)
+            logger.info(f"Админ {message.from_user.id} добавил пользователя {user_id}")
+        else:
+            await message.answer(f"⚠️ Пользователь {user_id} уже есть в списке разрешённых.")
+    
+    except ValueError:
+        await message.answer("❌ Ошибка: введите корректный числовой ID пользователя.")
+        return  # Не сбрасываем состояние, ждём корректный ввод
+    
+    await state.clear()
+
+
+@router.message(AdminStates.waiting_for_user_id_to_remove)
+async def process_remove_user(message: Message, state: FSMContext):
+    """Обработка удаления пользователя"""
+    if not is_admin(message.from_user.id):
+        return
+    
+    try:
+        user_id = int(message.text.strip())
+        
+        if remove_allowed_user(user_id):
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")],
+                [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
+            ])
+            await message.answer(f"✅ Пользователь {user_id} удалён из списка разрешённых!", reply_markup=keyboard)
+            logger.info(f"Админ {message.from_user.id} удалил пользователя {user_id}")
+        else:
+            await message.answer(f"⚠️ Пользователь {user_id} не найден в списке разрешённых.")
+    
+    except ValueError:
+        await message.answer("❌ Ошибка: введите корректный числовой ID пользователя.")
+        return  # Не сбрасываем состояние, ждём корректный ввод
     
     await state.clear()
 

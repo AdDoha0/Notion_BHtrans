@@ -2,11 +2,13 @@ from aiogram import Dispatcher
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message, FSInputFile
 from share.config import ADMINS
+from share.utils import is_allowed_user
 
 async def cmd_start(message: Message):
+    # Проверка доступа уже выполняется в middleware, поэтому здесь пользователь авторизован
     await message.answer_photo(
         photo=FSInputFile("assets/logo.png"),
-        caption="Я ваш бот для анализации звонков!\n"
+        caption="✅ Добро пожаловать! Я ваш бот для анализации звонков!\n"
         "Используйте /help для получения списка команд."
     )
 

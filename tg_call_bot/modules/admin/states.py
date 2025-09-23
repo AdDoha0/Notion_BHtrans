@@ -7,3 +7,5 @@ class AdminStates(StatesGroup):
     waiting_for_response_template = State()
     waiting_for_summary_main_prompt = State()
     waiting_for_summary_template = State()
+    waiting_for_user_id_to_add = State()
+    waiting_for_user_id_to_remove = State()

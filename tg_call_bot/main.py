@@ -10,6 +10,7 @@ from aiohttp import web
 import aiohttp
 
 from share.config import BOT_TOKEN, LOG_LEVEL, WEBHOOK_URL, WEBHOOK_PATH
+from share.middleware import AccessControlMiddleware
 from handlers.cmd import register_handlers
 from modules.notion.handlers import router as notion_router
 from modules.admin.handlers import router as admin_router
@@ -30,6 +31,11 @@ async def main():
     bot = Bot(token=BOT_TOKEN, default=default)
     storage = MemoryStorage()
     dp = Dispatcher(storage=storage)
+    
+    # Подключаем middleware для контроля доступа
+    dp.message.middleware(AccessControlMiddleware())
+    dp.callback_query.middleware(AccessControlMiddleware())
+    
     # Подключаем админ обработчики (приоритет)
     dp.include_router(admin_router)
     # Подключаем обработчики Notion
