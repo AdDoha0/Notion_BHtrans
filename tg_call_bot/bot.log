@@ -1203,3 +1203,61 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: messa
 2025-09-25 21:11:02,454 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgEAAxkBAAIDEGjSqfrlk725Jq8wDx9WSZb_9cG0AAL1BQACMdiYRtfTHivpcwVdNgQ.mp3
 2025-09-25 21:11:02,455 - modules.openai.client - INFO - Анализируем транскрибированный текст: Hello? Hello, James. Can you hear me now? Can you hear me? Yeah. I can hear you. Yeah. We can hear e...
 2025-09-25 21:11:02,455 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста
+2025-09-25 21:14:02,946 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 21:14:03,073 - modules.openai.client - INFO - Успешно получен ответ от GPT
+2025-09-25 21:14:03,073 - modules.openai.client - INFO - Результат GPT: 14425 символов
+2025-09-25 21:14:03,411 - aiogram.event - INFO - Update id=865824818 is handled. Duration 253322 ms by bot id=8373080018
+2025-09-25 21:19:35,943 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-25 21:19:35,943 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 21:19:35,943 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 21:19:39,621 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 21:19:39,621 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 21:19:40,317 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 21:19:46,002 - aiogram.event - INFO - Update id=865824819 is handled. Duration 495 ms by bot id=8373080018
+2025-09-25 21:19:47,433 - share.user_manager - INFO - Загружено 2 разрешенных пользователей из /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:19:47,572 - modules.admin.handlers - INFO - Админ 6979740321 перезагрузил список пользователей
+2025-09-25 21:19:47,572 - aiogram.event - INFO - Update id=865824820 is handled. Duration 139 ms by bot id=8373080018
+2025-09-25 21:19:54,778 - aiogram.event - INFO - Update id=865824821 is handled. Duration 141 ms by bot id=8373080018
+2025-09-25 21:19:56,146 - aiogram.event - INFO - Update id=865824822 is handled. Duration 119 ms by bot id=8373080018
+2025-09-25 21:19:57,903 - aiogram.event - INFO - Update id=865824823 is handled. Duration 109 ms by bot id=8373080018
+2025-09-25 21:20:00,716 - aiogram.event - INFO - Update id=865824824 is handled. Duration 170 ms by bot id=8373080018
+2025-09-25 21:20:32,575 - aiogram.event - INFO - Update id=865824825 is handled. Duration 115 ms by bot id=8373080018
+2025-09-25 21:20:34,429 - aiogram.event - INFO - Update id=865824826 is handled. Duration 138 ms by bot id=8373080018
+2025-09-25 21:20:36,029 - share.user_manager - INFO - Список пользователей сохранен в /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:20:36,029 - share.user_manager - INFO - Пользователь 7970652293 добавлен в список разрешённых
+2025-09-25 21:20:36,164 - modules.admin.handlers - INFO - Админ 6979740321 добавил пользователя 7970652293
+2025-09-25 21:20:36,164 - aiogram.event - INFO - Update id=865824827 is handled. Duration 136 ms by bot id=8373080018
+2025-09-25 21:20:38,439 - aiogram.event - INFO - Update id=865824828 is handled. Duration 138 ms by bot id=8373080018
+2025-09-25 21:20:39,134 - share.user_manager - INFO - Загружено 3 разрешенных пользователей из /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:20:39,299 - modules.admin.handlers - INFO - Админ 6979740321 перезагрузил список пользователей
+2025-09-25 21:20:39,300 - aiogram.event - INFO - Update id=865824829 is handled. Duration 165 ms by bot id=8373080018
+2025-09-25 21:20:40,907 - aiogram.event - INFO - Update id=865824830 is handled. Duration 134 ms by bot id=8373080018
+2025-09-25 21:20:43,723 - aiogram.event - INFO - Update id=865824831 is handled. Duration 120 ms by bot id=8373080018
+2025-09-25 21:20:48,715 - aiogram.event - INFO - Update id=865824832 is handled. Duration 147 ms by bot id=8373080018
+2025-09-25 21:20:51,605 - share.user_manager - INFO - Список пользователей сохранен в /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:20:51,605 - share.user_manager - INFO - Пользователь 7970652293 удалён из списка разрешённых
+2025-09-25 21:20:51,864 - modules.admin.handlers - INFO - Админ 6979740321 удалил пользователя 7970652293
+2025-09-25 21:20:51,864 - aiogram.event - INFO - Update id=865824833 is handled. Duration 261 ms by bot id=8373080018
+2025-09-25 21:20:53,973 - aiogram.event - INFO - Update id=865824834 is handled. Duration 156 ms by bot id=8373080018
+2025-09-25 21:20:55,544 - share.user_manager - INFO - Загружено 2 разрешенных пользователей из /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:20:55,738 - modules.admin.handlers - INFO - Админ 6979740321 перезагрузил список пользователей
+2025-09-25 21:20:55,738 - aiogram.event - INFO - Update id=865824835 is handled. Duration 195 ms by bot id=8373080018
+2025-09-25 21:20:57,041 - aiogram.event - INFO - Update id=865824836 is handled. Duration 214 ms by bot id=8373080018
+2025-09-25 21:20:58,142 - aiogram.event - INFO - Update id=865824837 is handled. Duration 277 ms by bot id=8373080018
+2025-09-25 21:20:59,649 - aiogram.event - INFO - Update id=865824838 is handled. Duration 145 ms by bot id=8373080018
+2025-09-25 21:21:00,828 - share.user_manager - INFO - Список пользователей сохранен в /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:21:00,829 - share.user_manager - INFO - Пользователь 7970652293 добавлен в список разрешённых
+2025-09-25 21:21:00,954 - modules.admin.handlers - INFO - Админ 6979740321 добавил пользователя 7970652293
+2025-09-25 21:21:00,954 - aiogram.event - INFO - Update id=865824839 is handled. Duration 126 ms by bot id=8373080018
+2025-09-25 21:21:02,813 - aiogram.event - INFO - Update id=865824840 is handled. Duration 192 ms by bot id=8373080018
+2025-09-25 21:21:04,448 - aiogram.event - INFO - Update id=865824841 is handled. Duration 122 ms by bot id=8373080018
+2025-09-25 21:21:05,909 - aiogram.event - INFO - Update id=865824842 is handled. Duration 119 ms by bot id=8373080018
+2025-09-25 21:21:06,885 - share.user_manager - INFO - Загружено 3 разрешенных пользователей из /home/user/my_projects/notion_BHtrans_project/tg_call_bot/data/allowed_users.json
+2025-09-25 21:21:06,993 - modules.admin.handlers - INFO - Админ 6979740321 перезагрузил список пользователей
+2025-09-25 21:21:06,994 - aiogram.event - INFO - Update id=865824843 is handled. Duration 109 ms by bot id=8373080018
+2025-09-25 21:21:11,126 - aiogram.event - INFO - Update id=865824844 is handled. Duration 125 ms by bot id=8373080018
+2025-09-25 21:21:12,087 - aiogram.event - INFO - Update id=865824845 is handled. Duration 124 ms by bot id=8373080018
+2025-09-25 21:21:14,667 - aiogram.event - INFO - Update id=865824846 is handled. Duration 140 ms by bot id=8373080018
+2025-09-25 21:21:15,534 - aiogram.event - INFO - Update id=865824847 is handled. Duration 118 ms by bot id=8373080018
+2025-09-25 21:21:17,386 - aiogram.event - INFO - Update id=865824848 is handled. Duration 1249 ms by bot id=8373080018
+2025-09-25 21:21:18,481 - aiogram.event - INFO - Update id=865824849 is handled. Duration 126 ms by bot id=8373080018

@@ -13,7 +13,7 @@ from share.promt_utils import (
     get_summary_main_prompt, get_summary_template, save_summary_main_prompt, save_summary_template
 )
 from share.utils import (
-    add_allowed_user, remove_allowed_user, get_allowed_users_list, is_allowed_user
+    add_allowed_user, remove_allowed_user, get_allowed_users_list, is_allowed_user, reload_users, get_users_count
 )
 from .states import AdminStates
 
@@ -160,6 +160,8 @@ async def admin_callback_handler(callback: CallbackQuery, state: FSMContext):
         await start_add_user(callback, state)
     elif action == "admin_users_remove":
         await start_remove_user(callback, state)
+    elif action == "admin_users_reload":
+        await reload_users_from_file(callback)
 
 async def show_stats(callback: CallbackQuery):
     """Показать статистику бота"""
@@ -549,7 +551,9 @@ async def process_summary_template(message: Message, state: FSMContext):
 # Функции управления пользователями
 async def show_users_menu(callback: CallbackQuery):
     """Показать меню управления пользователями"""
+    users_count = get_users_count()
     text = "👥 <b>Управление пользователями</b>\n\n"
+    text += f"Всего разрешённых пользователей: <b>{users_count}</b>\n\n"
     text += "Выберите действие:"
     
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
@@ -558,6 +562,7 @@ async def show_users_menu(callback: CallbackQuery):
             InlineKeyboardButton(text="➕ Добавить", callback_data="admin_users_add"),
             InlineKeyboardButton(text="➖ Удалить", callback_data="admin_users_remove")
         ],
+        [InlineKeyboardButton(text="🔄 Перезагрузить", callback_data="admin_users_reload")],
         [InlineKeyboardButton(text="🔙 Назад", callback_data="admin_back")]
     ])
     
@@ -573,6 +578,7 @@ async def show_allowed_users(callback: CallbackQuery):
     if users:
         for i, user_id in enumerate(users, 1):
             text += f"{i}. ID: <code>{user_id}</code>\n"
+        text += f"\nВсего: <b>{len(users)}</b> пользователей"
     else:
         text += "❌ Список пуст"
     
@@ -581,6 +587,37 @@ async def show_allowed_users(callback: CallbackQuery):
     ])
     
     await callback.message.edit_text(text, reply_markup=keyboard)
+
+
+async def reload_users_from_file(callback: CallbackQuery):
+    """Перезагружает список пользователей из JSON файла"""
+    try:
+        if reload_users():
+            users_count = get_users_count()
+            text = "✅ <b>Список пользователей успешно перезагружен!</b>\n\n"
+            text += f"Загружено: <b>{users_count}</b> пользователей"
+            
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="📋 Показать список", callback_data="admin_users_list")],
+                [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")]
+            ])
+            
+            await callback.message.edit_text(text, reply_markup=keyboard)
+            logger.info(f"Админ {callback.from_user.id} перезагрузил список пользователей")
+        else:
+            text = "❌ <b>Ошибка при перезагрузке списка пользователей</b>\n\n"
+            text += "Проверьте целостность JSON файла и попробуйте снова."
+            
+            keyboard = InlineKeyboardMarkup(inline_keyboard=[
+                [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")]
+            ])
+            
+            await callback.message.edit_text(text, reply_markup=keyboard)
+            logger.error(f"Ошибка перезагрузки списка пользователей от админа {callback.from_user.id}")
+            
+    except Exception as e:
+        await callback.answer("❌ Ошибка при перезагрузке списка", show_alert=True)
+        logger.error(f"Исключение при перезагрузке пользователей: {e}")
 
 
 async def start_add_user(callback: CallbackQuery, state: FSMContext):
@@ -624,7 +661,7 @@ async def process_add_user(message: Message, state: FSMContext):
                 [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")],
                 [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
             ])
-            await message.answer(f"✅ Пользователь {user_id} добавлен в список разрешённых!", reply_markup=keyboard)
+            await message.answer(f"✅ Пользователь {user_id} добавлен в список разрешённых и сохранён в JSON файл!", reply_markup=keyboard)
             logger.info(f"Админ {message.from_user.id} добавил пользователя {user_id}")
         else:
             await message.answer(f"⚠️ Пользователь {user_id} уже есть в списке разрешённых.")
@@ -650,7 +687,7 @@ async def process_remove_user(message: Message, state: FSMContext):
                 [InlineKeyboardButton(text="🔙 К управлению", callback_data="admin_users")],
                 [InlineKeyboardButton(text="🏠 В главное меню", callback_data="admin_back")]
             ])
-            await message.answer(f"✅ Пользователь {user_id} удалён из списка разрешённых!", reply_markup=keyboard)
+            await message.answer(f"✅ Пользователь {user_id} удалён из списка разрешённых и изменения сохранены в JSON файл!", reply_markup=keyboard)
             logger.info(f"Админ {message.from_user.id} удалил пользователя {user_id}")
         else:
             await message.answer(f"⚠️ Пользователь {user_id} не найден в списке разрешённых.")
