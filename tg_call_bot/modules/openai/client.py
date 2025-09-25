@@ -29,19 +29,24 @@ async def create_gptAnswer(
         message: str,
         system_promt: str,
         model: str = "gpt-4o",
-        max_tokens: int = 2000,
+        max_tokens: int = None,
                            ) -> str:
     """Создает ответ GPT на основе транскрибированного текста"""
     logger.info(f"Создаем ответ GPT на основе транскрибированного текста")
     try:
-        response = await client.chat.completions.create(
-            model=model, 
-            messages=[
+        completion_params = {
+            "model": model, 
+            "messages": [
                 {"role": "system", "content": system_promt},
                 {"role": "user", "content": f"{message}"}
-            ],
-            max_tokens=max_tokens
-        )
+            ]
+        }
+        
+        # Добавляем max_tokens только если он указан
+        if max_tokens is not None:
+            completion_params["max_tokens"] = max_tokens
+            
+        response = await client.chat.completions.create(**completion_params)
         logger.info("Успешно получен ответ от GPT")
         result = response.choices[0].message.content
         logger.info(f"Результат GPT: {len(result) if result else 0} символов")
@@ -53,7 +58,7 @@ async def create_gptAnswer(
 
 
 
-async def analyze_transcribed_text(transcribed_text: str, system_promt: str, model: str = "gpt-4o", max_tokens: int = 3000) -> str:
+async def analyze_transcribed_text(transcribed_text: str, system_promt: str, model: str = "gpt-4o", max_tokens: int = None) -> str:
     """Анализирует транскрибированный текст через GPT"""
     try:
         logger.info(f"Анализируем транскрибированный текст: {transcribed_text[:100]}...")

@@ -1,0 +1,1205 @@
+2025-09-24 21:16:25,835 - __main__ - INFO - Запуск бота через long polling...
+2025-09-24 21:16:25,835 - aiogram.dispatcher - INFO - Start polling
+2025-09-24 21:16:26,448 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-24 21:16:35,716 - aiogram.event - INFO - Update id=865824747 is handled. Duration 547 ms by bot id=8373080018
+2025-09-24 22:14:13,913 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-24 22:14:13,925 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 22:14:25,506 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 22:40:09,459 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 22:40:09,460 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 22:40:20,800 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 22:54:30,463 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 22:54:30,463 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 22:54:41,985 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:12:33,936 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-24 23:12:33,936 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:12:45,338 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:37:57,192 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-24 23:37:57,194 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:38:08,570 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:39:42,378 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:39:42,378 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:39:53,637 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:39:53,639 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:39:53,639 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:40:05,068 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:41:52,999 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:41:53,000 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:42:04,300 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:42:24,515 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:42:24,515 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:42:35,945 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:43:35,407 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:43:35,408 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:43:46,650 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:43:46,650 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:43:46,651 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:43:58,171 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:44:06,842 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:44:06,843 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:44:18,090 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:44:18,091 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:44:18,091 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:44:19,328 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2025-09-24 23:44:19,328 - aiogram.dispatcher - WARNING - Sleep for 1.235040 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-24 23:44:30,796 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 8373080018)
+2025-09-24 23:44:30,798 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:44:30,798 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:44:42,305 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:46:04,077 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:46:04,078 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:46:15,388 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:46:15,390 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:46:15,390 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:46:26,810 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:46:30,236 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:46:30,237 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:46:41,507 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:47:11,778 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:47:11,778 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:47:23,193 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:47:24,807 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:47:24,808 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:47:36,080 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:47:36,082 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:47:36,082 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:47:47,548 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:56:21,972 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:56:21,973 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:56:23,079 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+2025-09-24 23:56:23,079 - aiogram.dispatcher - WARNING - Sleep for 1.133514 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-24 23:56:34,632 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 8373080018)
+2025-09-24 23:57:10,033 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:57:10,035 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:57:21,523 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:57:26,105 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-24 23:57:26,105 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:57:37,685 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-24 23:57:43,233 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-24 23:57:43,577 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-24 23:57:43,598 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-24 23:58:40,672 - __main__ - INFO - Запуск бота через long polling...
+2025-09-24 23:58:40,673 - aiogram.dispatcher - INFO - Start polling
+2025-09-24 23:58:40,678 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-24 23:58:40,929 - __main__ - ERROR - Ошибка при polling: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Temporary failure in name resolution]
+2025-09-24 23:58:45,936 - __main__ - ERROR - Ошибка при запуске бота: HTTP Client says - ClientConnectorDNSError: Cannot connect to host api.telegram.org:443 ssl:default [Temporary failure in name resolution]
+2025-09-24 23:58:57,693 - __main__ - INFO - Запуск бота через long polling...
+2025-09-24 23:58:57,693 - aiogram.dispatcher - INFO - Start polling
+2025-09-24 23:58:57,973 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-24 23:59:48,398 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-24 23:59:48,398 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-24 23:59:59,874 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 18:28:05,406 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-25 18:28:05,406 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 18:28:07,029 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 18:28:07,029 - share.middleware - WARNING - Отклонён доступ для пользователя 7970652293 (@bellaa115)
+2025-09-25 18:28:07,030 - share.middleware - WARNING - Отклонён доступ для пользователя 7970652293 (@bellaa115)
+2025-09-25 18:28:07,032 - share.middleware - WARNING - Отклонён доступ для пользователя 7970652293 (@bellaa115)
+2025-09-25 19:04:00,759 - aiogram.event - INFO - Update id=865824748 is not handled. Duration 5134 ms by bot id=8373080018
+2025-09-25 19:04:00,759 - aiogram.event - ERROR - Cause exception while process update id=865824748 by bot id=8373080018
+TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1283, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 988, in _read_ready__get_buffer
+    nbytes = self._sock.recv_into(buf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1488, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1581, in _create_direct_connection
+    raise last_exc
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1550, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1291, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 31, in __call__
+    await event.answer("⛔ У вас нет доступа к этому боту.")
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 184, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+2025-09-25 19:04:00,771 - aiogram.event - INFO - Update id=865824749 is not handled. Duration 5145 ms by bot id=8373080018
+2025-09-25 19:04:00,771 - aiogram.event - ERROR - Cause exception while process update id=865824749 by bot id=8373080018
+TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1283, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 988, in _read_ready__get_buffer
+    nbytes = self._sock.recv_into(buf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1488, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1581, in _create_direct_connection
+    raise last_exc
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1550, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1291, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 31, in __call__
+    await event.answer("⛔ У вас нет доступа к этому боту.")
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 184, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+2025-09-25 19:04:00,772 - aiogram.event - INFO - Update id=865824750 is not handled. Duration 5146 ms by bot id=8373080018
+2025-09-25 19:04:00,772 - aiogram.event - ERROR - Cause exception while process update id=865824750 by bot id=8373080018
+TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1283, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 988, in _read_ready__get_buffer
+    nbytes = self._sock.recv_into(buf)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1488, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1581, in _create_direct_connection
+    raise last_exc
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1550, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1291, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 31, in __call__
+    await event.answer("⛔ У вас нет доступа к этому боту.")
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 184, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+2025-09-25 19:05:06,016 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-25 19:05:06,050 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:05:17,542 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:08:56,843 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-25 19:08:56,843 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:09:08,095 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:09:08,096 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-25 19:09:08,096 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:09:19,976 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:18:22,683 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 19:18:22,685 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 19:18:23,198 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:18:23,302 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:23,302 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:18:27,510 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:27,510 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:18:28,673 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:28,673 - aiogram.dispatcher - WARNING - Sleep for 1.248134 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:18:33,150 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:33,150 - aiogram.dispatcher - WARNING - Sleep for 1.313016 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:18:34,222 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 8373080018)
+2025-09-25 19:18:34,570 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:34,571 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:18:35,252 - aiogram.event - INFO - Update id=865824751 is handled. Duration 1029 ms by bot id=8373080018
+2025-09-25 19:18:38,682 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:38,682 - aiogram.dispatcher - WARNING - Sleep for 1.670557 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:18:40,721 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:40,721 - aiogram.dispatcher - WARNING - Sleep for 1.092044 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:18:44,940 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:44,940 - aiogram.dispatcher - WARNING - Sleep for 2.406535 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:18:47,567 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:47,567 - aiogram.dispatcher - WARNING - Sleep for 1.385957 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:18:52,053 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:52,054 - aiogram.dispatcher - WARNING - Sleep for 3.317382 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:18:55,537 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:18:55,537 - aiogram.dispatcher - WARNING - Sleep for 1.934027 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:19:00,647 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:00,647 - aiogram.dispatcher - WARNING - Sleep for 4.447169 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:19:05,580 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:05,580 - aiogram.dispatcher - WARNING - Sleep for 2.712663 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:19:08,425 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:08,426 - aiogram.dispatcher - WARNING - Sleep for 4.842023 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:19:13,376 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:13,377 - aiogram.dispatcher - WARNING - Sleep for 3.475168 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:19:17,142 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:17,142 - aiogram.dispatcher - WARNING - Sleep for 5.061265 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:19:22,584 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:22,584 - aiogram.dispatcher - WARNING - Sleep for 4.256905 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:19:26,923 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:26,924 - aiogram.dispatcher - WARNING - Sleep for 4.937699 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:19:31,973 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:31,974 - aiogram.dispatcher - WARNING - Sleep for 5.070653 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:19:37,163 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:37,163 - aiogram.dispatcher - WARNING - Sleep for 4.949729 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:19:42,246 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:42,246 - aiogram.dispatcher - WARNING - Sleep for 5.035653 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:19:48,526 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:19:48,527 - aiogram.dispatcher - WARNING - Sleep for 5.024679 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:20:03,177 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:03,177 - aiogram.dispatcher - WARNING - Sleep for 4.868288 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:20:03,637 - aiogram.dispatcher - INFO - Connection established (tryings = 11, bot id = 8373080018)
+2025-09-25 19:20:08,178 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:08,178 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:20:12,546 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:12,548 - aiogram.dispatcher - WARNING - Sleep for 4.838079 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:20:17,803 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:17,803 - aiogram.dispatcher - WARNING - Sleep for 1.254181 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:20:22,232 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:22,233 - aiogram.dispatcher - WARNING - Sleep for 4.865983 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:20:27,461 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:27,462 - aiogram.dispatcher - WARNING - Sleep for 1.737138 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:20:33,015 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:33,016 - aiogram.dispatcher - WARNING - Sleep for 5.078065 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:20:38,378 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:38,378 - aiogram.dispatcher - WARNING - Sleep for 2.185243 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:20:43,777 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:43,777 - aiogram.dispatcher - WARNING - Sleep for 5.052721 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:20:49,002 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:49,002 - aiogram.dispatcher - WARNING - Sleep for 2.857821 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:20:55,030 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:20:55,030 - aiogram.dispatcher - WARNING - Sleep for 5.026571 seconds and try again... (tryings = 14, bot id = 8373080018)
+2025-09-25 19:21:00,258 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:00,258 - aiogram.dispatcher - WARNING - Sleep for 3.713638 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:21:04,322 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:04,322 - aiogram.dispatcher - WARNING - Sleep for 5.037979 seconds and try again... (tryings = 15, bot id = 8373080018)
+2025-09-25 19:21:09,556 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:09,556 - aiogram.dispatcher - WARNING - Sleep for 4.852795 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:21:14,530 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:14,530 - aiogram.dispatcher - WARNING - Sleep for 5.105772 seconds and try again... (tryings = 16, bot id = 8373080018)
+2025-09-25 19:21:19,804 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:19,804 - aiogram.dispatcher - WARNING - Sleep for 4.954563 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:21:24,941 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:24,941 - aiogram.dispatcher - WARNING - Sleep for 4.916661 seconds and try again... (tryings = 17, bot id = 8373080018)
+2025-09-25 19:21:30,133 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:30,133 - aiogram.dispatcher - WARNING - Sleep for 4.998569 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:21:35,283 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:35,283 - aiogram.dispatcher - WARNING - Sleep for 4.938159 seconds and try again... (tryings = 18, bot id = 8373080018)
+2025-09-25 19:21:40,568 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:40,568 - aiogram.dispatcher - WARNING - Sleep for 5.002612 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:21:45,903 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:45,903 - aiogram.dispatcher - WARNING - Sleep for 4.952605 seconds and try again... (tryings = 19, bot id = 8373080018)
+2025-09-25 19:21:50,995 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:50,995 - aiogram.dispatcher - WARNING - Sleep for 4.923314 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:21:56,040 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:21:56,041 - aiogram.dispatcher - WARNING - Sleep for 4.996913 seconds and try again... (tryings = 20, bot id = 8373080018)
+2025-09-25 19:22:01,320 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:01,320 - aiogram.dispatcher - WARNING - Sleep for 5.122343 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:22:06,594 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:06,594 - aiogram.dispatcher - WARNING - Sleep for 5.105775 seconds and try again... (tryings = 21, bot id = 8373080018)
+2025-09-25 19:22:11,862 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:11,862 - aiogram.dispatcher - WARNING - Sleep for 5.085333 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:22:17,069 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:17,069 - aiogram.dispatcher - WARNING - Sleep for 5.122215 seconds and try again... (tryings = 22, bot id = 8373080018)
+2025-09-25 19:22:22,315 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:22,315 - aiogram.dispatcher - WARNING - Sleep for 5.037276 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:22:27,533 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:27,533 - aiogram.dispatcher - WARNING - Sleep for 4.866224 seconds and try again... (tryings = 23, bot id = 8373080018)
+2025-09-25 19:22:32,519 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:32,519 - aiogram.dispatcher - WARNING - Sleep for 4.984559 seconds and try again... (tryings = 14, bot id = 8373080018)
+2025-09-25 19:22:37,635 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:37,635 - aiogram.dispatcher - WARNING - Sleep for 4.897687 seconds and try again... (tryings = 24, bot id = 8373080018)
+2025-09-25 19:22:42,716 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:42,716 - aiogram.dispatcher - WARNING - Sleep for 5.051910 seconds and try again... (tryings = 15, bot id = 8373080018)
+2025-09-25 19:22:48,069 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:48,070 - aiogram.dispatcher - WARNING - Sleep for 5.032599 seconds and try again... (tryings = 25, bot id = 8373080018)
+2025-09-25 19:22:53,243 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:53,243 - aiogram.dispatcher - WARNING - Sleep for 4.953192 seconds and try again... (tryings = 16, bot id = 8373080018)
+2025-09-25 19:22:58,494 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:22:58,494 - aiogram.dispatcher - WARNING - Sleep for 4.924316 seconds and try again... (tryings = 26, bot id = 8373080018)
+2025-09-25 19:23:03,636 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:03,636 - aiogram.dispatcher - WARNING - Sleep for 5.067008 seconds and try again... (tryings = 17, bot id = 8373080018)
+2025-09-25 19:23:08,866 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:08,866 - aiogram.dispatcher - WARNING - Sleep for 4.913746 seconds and try again... (tryings = 27, bot id = 8373080018)
+2025-09-25 19:23:13,922 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:13,922 - aiogram.dispatcher - WARNING - Sleep for 5.120492 seconds and try again... (tryings = 18, bot id = 8373080018)
+2025-09-25 19:23:19,246 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:19,246 - aiogram.dispatcher - WARNING - Sleep for 4.933710 seconds and try again... (tryings = 28, bot id = 8373080018)
+2025-09-25 19:23:24,618 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:24,619 - aiogram.dispatcher - WARNING - Sleep for 4.921523 seconds and try again... (tryings = 19, bot id = 8373080018)
+2025-09-25 19:23:29,748 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:29,748 - aiogram.dispatcher - WARNING - Sleep for 5.064512 seconds and try again... (tryings = 29, bot id = 8373080018)
+2025-09-25 19:23:35,066 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:35,066 - aiogram.dispatcher - WARNING - Sleep for 4.940672 seconds and try again... (tryings = 20, bot id = 8373080018)
+2025-09-25 19:23:40,149 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:40,149 - aiogram.dispatcher - WARNING - Sleep for 5.002028 seconds and try again... (tryings = 30, bot id = 8373080018)
+2025-09-25 19:23:45,577 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:45,577 - aiogram.dispatcher - WARNING - Sleep for 4.988066 seconds and try again... (tryings = 21, bot id = 8373080018)
+2025-09-25 19:23:50,844 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:50,845 - aiogram.dispatcher - WARNING - Sleep for 5.104570 seconds and try again... (tryings = 31, bot id = 8373080018)
+2025-09-25 19:23:56,377 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:23:56,377 - aiogram.dispatcher - WARNING - Sleep for 4.975272 seconds and try again... (tryings = 22, bot id = 8373080018)
+2025-09-25 19:24:01,796 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:01,797 - aiogram.dispatcher - WARNING - Sleep for 4.983378 seconds and try again... (tryings = 32, bot id = 8373080018)
+2025-09-25 19:24:06,972 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:06,973 - aiogram.dispatcher - WARNING - Sleep for 5.084927 seconds and try again... (tryings = 23, bot id = 8373080018)
+2025-09-25 19:24:12,242 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:12,243 - aiogram.dispatcher - WARNING - Sleep for 5.041792 seconds and try again... (tryings = 33, bot id = 8373080018)
+2025-09-25 19:24:17,390 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:17,390 - aiogram.dispatcher - WARNING - Sleep for 5.010632 seconds and try again... (tryings = 24, bot id = 8373080018)
+2025-09-25 19:24:22,545 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:22,545 - aiogram.dispatcher - WARNING - Sleep for 4.979581 seconds and try again... (tryings = 34, bot id = 8373080018)
+2025-09-25 19:24:27,651 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:27,651 - aiogram.dispatcher - WARNING - Sleep for 5.039038 seconds and try again... (tryings = 25, bot id = 8373080018)
+2025-09-25 19:24:32,823 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:32,823 - aiogram.dispatcher - WARNING - Sleep for 4.872599 seconds and try again... (tryings = 35, bot id = 8373080018)
+2025-09-25 19:24:37,933 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:37,933 - aiogram.dispatcher - WARNING - Sleep for 4.892165 seconds and try again... (tryings = 26, bot id = 8373080018)
+2025-09-25 19:24:42,945 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:42,946 - aiogram.dispatcher - WARNING - Sleep for 4.932203 seconds and try again... (tryings = 36, bot id = 8373080018)
+2025-09-25 19:24:48,163 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:48,163 - aiogram.dispatcher - WARNING - Sleep for 5.115995 seconds and try again... (tryings = 27, bot id = 8373080018)
+2025-09-25 19:24:53,390 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:53,390 - aiogram.dispatcher - WARNING - Sleep for 4.921657 seconds and try again... (tryings = 37, bot id = 8373080018)
+2025-09-25 19:24:58,441 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:24:58,442 - aiogram.dispatcher - WARNING - Sleep for 4.925843 seconds and try again... (tryings = 28, bot id = 8373080018)
+2025-09-25 19:25:03,501 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:03,501 - aiogram.dispatcher - WARNING - Sleep for 5.018109 seconds and try again... (tryings = 38, bot id = 8373080018)
+2025-09-25 19:25:08,709 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:08,709 - aiogram.dispatcher - WARNING - Sleep for 4.946404 seconds and try again... (tryings = 29, bot id = 8373080018)
+2025-09-25 19:25:13,804 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:13,805 - aiogram.dispatcher - WARNING - Sleep for 4.981979 seconds and try again... (tryings = 39, bot id = 8373080018)
+2025-09-25 19:25:18,914 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:18,915 - aiogram.dispatcher - WARNING - Sleep for 5.080526 seconds and try again... (tryings = 30, bot id = 8373080018)
+2025-09-25 19:25:24,115 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:24,115 - aiogram.dispatcher - WARNING - Sleep for 5.045220 seconds and try again... (tryings = 40, bot id = 8373080018)
+2025-09-25 19:25:29,391 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:29,391 - aiogram.dispatcher - WARNING - Sleep for 4.866596 seconds and try again... (tryings = 31, bot id = 8373080018)
+2025-09-25 19:25:29,480 - aiogram.dispatcher - INFO - Connection established (tryings = 41, bot id = 8373080018)
+2025-09-25 19:25:30,368 - aiogram.event - INFO - Update id=865824752 is not handled. Duration 887 ms by bot id=8373080018
+2025-09-25 19:25:30,368 - aiogram.event - ERROR - Cause exception while process update id=865824752 by bot id=8373080018
+TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted for everyone
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 38, in __call__
+    return await handler(event, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 132, in admin_callback_handler
+    await callback.message.delete()
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted for everyone
+2025-09-25 19:25:34,409 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:34,409 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:25:38,662 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:25:38,662 - aiogram.dispatcher - WARNING - Sleep for 5.027489 seconds and try again... (tryings = 32, bot id = 8373080018)
+2025-09-25 19:25:40,257 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-25 19:25:40,257 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:25:40,257 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 19:25:45,774 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:25:53,272 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 19:25:53,272 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 19:25:59,577 - aiogram.event - INFO - Update id=865824753 is not handled. Duration 248 ms by bot id=8373080018
+2025-09-25 19:25:59,577 - aiogram.event - ERROR - Cause exception while process update id=865824753 by bot id=8373080018
+TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted for everyone
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 38, in __call__
+    return await handler(event, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 132, in admin_callback_handler
+    await callback.message.delete()
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted for everyone
+2025-09-25 19:26:08,845 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:26:11,299 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:11,300 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:26:15,643 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:15,643 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:26:17,110 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:17,110 - aiogram.dispatcher - WARNING - Sleep for 1.264307 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:26:22,184 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:22,184 - aiogram.dispatcher - WARNING - Sleep for 1.305958 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:26:24,380 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:24,380 - aiogram.dispatcher - WARNING - Sleep for 1.847112 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:26:29,713 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:29,713 - aiogram.dispatcher - WARNING - Sleep for 1.682932 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:26:31,641 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:31,641 - aiogram.dispatcher - WARNING - Sleep for 2.534393 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:26:37,610 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:37,610 - aiogram.dispatcher - WARNING - Sleep for 2.211879 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:26:40,250 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:40,250 - aiogram.dispatcher - WARNING - Sleep for 3.424060 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:26:43,913 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:43,913 - aiogram.dispatcher - WARNING - Sleep for 2.849444 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:26:47,033 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:47,033 - aiogram.dispatcher - WARNING - Sleep for 4.472130 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:26:51,709 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:51,710 - aiogram.dispatcher - WARNING - Sleep for 3.774950 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:26:56,140 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:26:56,140 - aiogram.dispatcher - WARNING - Sleep for 4.972388 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:27:02,065 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:02,065 - aiogram.dispatcher - WARNING - Sleep for 4.710842 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:27:07,155 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:07,155 - aiogram.dispatcher - WARNING - Sleep for 4.827339 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:27:12,144 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:12,144 - aiogram.dispatcher - WARNING - Sleep for 4.974275 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:27:17,416 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:17,416 - aiogram.dispatcher - WARNING - Sleep for 5.064222 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:27:22,706 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:22,706 - aiogram.dispatcher - WARNING - Sleep for 5.020013 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:27:29,252 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:29,252 - aiogram.dispatcher - WARNING - Sleep for 5.009599 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:27:34,453 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:34,453 - aiogram.dispatcher - WARNING - Sleep for 4.982563 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:27:39,778 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:39,778 - aiogram.dispatcher - WARNING - Sleep for 4.802648 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:27:44,942 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:44,942 - aiogram.dispatcher - WARNING - Sleep for 4.920399 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:27:50,090 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:50,090 - aiogram.dispatcher - WARNING - Sleep for 5.041534 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:27:55,478 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:27:55,478 - aiogram.dispatcher - WARNING - Sleep for 4.844576 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:28:00,614 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:00,614 - aiogram.dispatcher - WARNING - Sleep for 4.823056 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:28:05,845 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:05,845 - aiogram.dispatcher - WARNING - Sleep for 4.824949 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:28:11,063 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:11,063 - aiogram.dispatcher - WARNING - Sleep for 5.202754 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:28:16,507 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:16,507 - aiogram.dispatcher - WARNING - Sleep for 5.017561 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:28:21,844 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:21,844 - aiogram.dispatcher - WARNING - Sleep for 5.235959 seconds and try again... (tryings = 14, bot id = 8373080018)
+2025-09-25 19:28:27,354 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:27,355 - aiogram.dispatcher - WARNING - Sleep for 4.861919 seconds and try again... (tryings = 14, bot id = 8373080018)
+2025-09-25 19:28:29,889 - aiogram.dispatcher - INFO - Connection established (tryings = 15, bot id = 8373080018)
+2025-09-25 19:28:30,836 - aiogram.event - INFO - Update id=865824754 is handled. Duration 945 ms by bot id=8373080018
+2025-09-25 19:28:32,438 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:32,438 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:28:34,832 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:28:34,946 - aiogram.event - INFO - Update id=865824755 is handled. Duration 113 ms by bot id=8373080018
+2025-09-25 19:28:36,660 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:36,660 - aiogram.dispatcher - WARNING - Sleep for 4.971097 seconds and try again... (tryings = 15, bot id = 8373080018)
+2025-09-25 19:28:37,255 - aiogram.event - INFO - Update id=865824756 is handled. Duration 304 ms by bot id=8373080018
+2025-09-25 19:28:39,930 - aiogram.event - INFO - Update id=865824757 is handled. Duration 179 ms by bot id=8373080018
+2025-09-25 19:28:41,337 - aiogram.event - INFO - Update id=865824758 is handled. Duration 323 ms by bot id=8373080018
+2025-09-25 19:28:42,224 - aiogram.event - INFO - Update id=865824759 is handled. Duration 89 ms by bot id=8373080018
+2025-09-25 19:28:45,225 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:45,225 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:28:46,328 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:28:46,545 - aiogram.event - INFO - Update id=865824760 is handled. Duration 215 ms by bot id=8373080018
+2025-09-25 19:28:47,652 - aiogram.dispatcher - INFO - Connection established (tryings = 16, bot id = 8373080018)
+2025-09-25 19:28:48,022 - aiogram.event - INFO - Update id=865824760 is not handled. Duration 368 ms by bot id=8373080018
+2025-09-25 19:28:48,022 - aiogram.event - ERROR - Cause exception while process update id=865824760 by bot id=8373080018
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 38, in __call__
+    return await handler(event, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 134, in admin_callback_handler
+    await show_main_menu(callback)
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 275, in show_main_menu
+    await callback.message.edit_text(text, reply_markup=get_admin_keyboard())
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-09-25 19:28:48,657 - aiogram.event - INFO - Update id=865824761 is handled. Duration 1222 ms by bot id=8373080018
+2025-09-25 19:28:48,846 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:48,846 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:28:50,056 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:28:50,355 - aiogram.event - INFO - Update id=865824762 is handled. Duration 299 ms by bot id=8373080018
+2025-09-25 19:28:50,618 - aiogram.event - INFO - Update id=865824762 is not handled. Duration 348 ms by bot id=8373080018
+2025-09-25 19:28:50,618 - aiogram.event - ERROR - Cause exception while process update id=865824762 by bot id=8373080018
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/middleware.py", line 38, in __call__
+    return await handler(event, data)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 134, in admin_callback_handler
+    await show_main_menu(callback)
+  File "/home/user/my_projects/notion_BHtrans_project/tg_call_bot/modules/admin/handlers.py", line 275, in show_main_menu
+    await callback.message.edit_text(text, reply_markup=get_admin_keyboard())
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 485, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/my_projects/notion_BHtrans_project/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-09-25 19:28:53,078 - aiogram.event - INFO - Update id=865824763 is handled. Duration 1389 ms by bot id=8373080018
+2025-09-25 19:28:53,373 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:53,374 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:28:54,705 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:54,705 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:28:57,712 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:28:57,857 - aiogram.event - INFO - Update id=865824764 is handled. Duration 144 ms by bot id=8373080018
+2025-09-25 19:28:58,850 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:28:58,850 - aiogram.dispatcher - WARNING - Sleep for 1.383427 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:00,280 - aiogram.event - INFO - Update id=865824765 is handled. Duration 681 ms by bot id=8373080018
+2025-09-25 19:29:00,359 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:00,359 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:02,028 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:02,537 - aiogram.event - INFO - Update id=865824766 is handled. Duration 508 ms by bot id=8373080018
+2025-09-25 19:29:04,520 - aiogram.event - INFO - Update id=865824767 is handled. Duration 111 ms by bot id=8373080018
+2025-09-25 19:29:04,685 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:04,685 - aiogram.dispatcher - WARNING - Sleep for 1.726604 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:29:06,773 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:06,774 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:08,821 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:10,109 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/266f2cf82f2081af8592d1e8ea2a4f18/query "HTTP/1.1 200 OK"
+2025-09-25 19:29:10,111 - modules.notion.client - INFO - Получено 5 записей из Notion
+2025-09-25 19:29:10,345 - aiogram.event - INFO - Update id=865824768 is handled. Duration 1523 ms by bot id=8373080018
+2025-09-25 19:29:10,976 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:10,976 - aiogram.dispatcher - WARNING - Sleep for 2.354121 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:29:12,603 - aiogram.event - INFO - Update id=865824769 is handled. Duration 325 ms by bot id=8373080018
+2025-09-25 19:29:13,411 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:13,411 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:14,303 - aiogram.dispatcher - INFO - Connection established (tryings = 4, bot id = 8373080018)
+2025-09-25 19:29:14,512 - aiogram.event - INFO - Update id=865824770 is handled. Duration 209 ms by bot id=8373080018
+2025-09-25 19:29:17,634 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:17,634 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:18,974 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:18,974 - aiogram.dispatcher - WARNING - Sleep for 1.293069 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:23,350 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:23,350 - aiogram.dispatcher - WARNING - Sleep for 1.288060 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:24,976 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:24,977 - aiogram.dispatcher - WARNING - Sleep for 1.925502 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:29:30,759 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:30,759 - aiogram.dispatcher - WARNING - Sleep for 1.648132 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:29:32,487 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 8373080018)
+2025-09-25 19:29:32,493 - aiogram.event - INFO - Update id=865824771 is not handled. Duration 5 ms by bot id=8373080018
+2025-09-25 19:29:33,504 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 8373080018)
+2025-09-25 19:29:33,768 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:33,768 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:34,691 - aiogram.event - INFO - Update id=865824771 is handled. Duration 1186 ms by bot id=8373080018
+2025-09-25 19:29:37,847 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:37,847 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:29:39,179 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:39,180 - aiogram.dispatcher - WARNING - Sleep for 1.304887 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:43,864 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:43,864 - aiogram.dispatcher - WARNING - Sleep for 1.202691 seconds and try again... (tryings = 1, bot id = 8373080018)
+2025-09-25 19:29:45,225 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:45,225 - aiogram.dispatcher - WARNING - Sleep for 1.599185 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:29:50,004 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:50,004 - aiogram.dispatcher - WARNING - Sleep for 1.605290 seconds and try again... (tryings = 2, bot id = 8373080018)
+2025-09-25 19:29:51,886 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:51,886 - aiogram.dispatcher - WARNING - Sleep for 2.189199 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:29:57,652 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:57,652 - aiogram.dispatcher - WARNING - Sleep for 1.855568 seconds and try again... (tryings = 3, bot id = 8373080018)
+2025-09-25 19:29:59,955 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:29:59,955 - aiogram.dispatcher - WARNING - Sleep for 2.837009 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:30:02,875 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:02,875 - aiogram.dispatcher - WARNING - Sleep for 2.374444 seconds and try again... (tryings = 4, bot id = 8373080018)
+2025-09-25 19:30:08,431 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:08,431 - aiogram.dispatcher - WARNING - Sleep for 3.818042 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:30:13,202 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:13,202 - aiogram.dispatcher - WARNING - Sleep for 2.944828 seconds and try again... (tryings = 5, bot id = 8373080018)
+2025-09-25 19:30:16,666 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:16,666 - aiogram.dispatcher - WARNING - Sleep for 4.939124 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:30:21,742 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:21,743 - aiogram.dispatcher - WARNING - Sleep for 3.900636 seconds and try again... (tryings = 6, bot id = 8373080018)
+2025-09-25 19:30:26,388 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:26,388 - aiogram.dispatcher - WARNING - Sleep for 5.042776 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:30:32,415 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:32,415 - aiogram.dispatcher - WARNING - Sleep for 4.984020 seconds and try again... (tryings = 7, bot id = 8373080018)
+2025-09-25 19:30:37,810 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:37,810 - aiogram.dispatcher - WARNING - Sleep for 5.085932 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:30:43,249 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:43,250 - aiogram.dispatcher - WARNING - Sleep for 5.134142 seconds and try again... (tryings = 8, bot id = 8373080018)
+2025-09-25 19:30:48,806 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:48,806 - aiogram.dispatcher - WARNING - Sleep for 5.025885 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:30:54,184 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:54,184 - aiogram.dispatcher - WARNING - Sleep for 5.149041 seconds and try again... (tryings = 9, bot id = 8373080018)
+2025-09-25 19:30:59,680 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:30:59,680 - aiogram.dispatcher - WARNING - Sleep for 5.041604 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:31:05,195 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:05,195 - aiogram.dispatcher - WARNING - Sleep for 5.043227 seconds and try again... (tryings = 10, bot id = 8373080018)
+2025-09-25 19:31:10,558 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:10,558 - aiogram.dispatcher - WARNING - Sleep for 5.151800 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:31:16,065 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:16,065 - aiogram.dispatcher - WARNING - Sleep for 5.103115 seconds and try again... (tryings = 11, bot id = 8373080018)
+2025-09-25 19:31:21,506 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:21,506 - aiogram.dispatcher - WARNING - Sleep for 5.037792 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:31:26,828 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:26,828 - aiogram.dispatcher - WARNING - Sleep for 5.275566 seconds and try again... (tryings = 12, bot id = 8373080018)
+2025-09-25 19:31:33,276 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:33,276 - aiogram.dispatcher - WARNING - Sleep for 5.072653 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:31:38,684 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:38,684 - aiogram.dispatcher - WARNING - Sleep for 5.090442 seconds and try again... (tryings = 13, bot id = 8373080018)
+2025-09-25 19:31:44,047 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-25 19:31:44,048 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:31:44,048 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 19:31:44,131 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-09-25 19:31:44,131 - aiogram.dispatcher - WARNING - Sleep for 5.023139 seconds and try again... (tryings = 14, bot id = 8373080018)
+2025-09-25 19:31:55,805 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-09-25 19:31:55,810 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:31:55,811 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 19:32:05,718 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 19:32:05,719 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 19:32:06,318 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:37:49,264 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2559)
+2025-09-25 19:37:49,264 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-25 19:38:05,881 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-25 19:45:50,456 - aiogram.event - INFO - Update id=865824772 is handled. Duration 583 ms by bot id=8373080018
+2025-09-25 19:47:42,878 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-25 19:47:42,879 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:47:42,879 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 19:47:46,046 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 19:47:46,046 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 19:47:46,680 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 19:48:59,843 - aiogram.event - INFO - Update id=865824773 is not handled. Duration 1 ms by bot id=8373080018
+2025-09-25 19:50:21,047 - aiogram.event - INFO - Update id=865824774 is not handled. Duration 1 ms by bot id=8373080018
+2025-09-25 19:50:32,337 - aiogram.event - INFO - Update id=865824775 is handled. Duration 1074 ms by bot id=8373080018
+2025-09-25 19:51:10,758 - aiogram.event - INFO - Update id=865824776 is handled. Duration 135 ms by bot id=8373080018
+2025-09-25 19:51:13,741 - aiogram.event - INFO - Update id=865824777 is handled. Duration 241 ms by bot id=8373080018
+2025-09-25 19:51:46,307 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 19:51:49,236 - modules.openai.client - INFO - Транскрибируем аудиофайл в текст
+2025-09-25 19:53:17,170 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-09-25 19:53:17,175 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgIAAxkBAAIDRWjVcyHxfTcKA9Y9XHgje6fZAo9vAAJRiAAC_XSpSiVv-jt7zCHYNgQ.m4a
+2025-09-25 19:53:17,176 - modules.openai.client - INFO - Анализируем транскрибированный текст: Погнали! Че там? Че хотела рассказать? Ничего, я просто хотела больше посоветоваться На то ли? Вот Н...
+2025-09-25 19:53:17,176 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста
+2025-09-25 19:54:23,281 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 19:54:23,286 - modules.openai.client - INFO - Успешно получен ответ от GPT
+2025-09-25 19:54:23,314 - modules.openai.client - INFO - Результат GPT: 2977 символов
+2025-09-25 19:54:26,570 - aiogram.event - INFO - Update id=865824778 is handled. Duration 160264 ms by bot id=8373080018
+2025-09-25 19:56:18,028 - aiogram.event - INFO - Update id=865824779 is handled. Duration 124 ms by bot id=8373080018
+2025-09-25 19:56:32,666 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 19:56:32,969 - modules.openai.handlers - ERROR - Ошибка при обработке аудио: Telegram server says - Bad Request: file is too big
+2025-09-25 19:56:33,115 - aiogram.event - INFO - Update id=865824780 is handled. Duration 450 ms by bot id=8373080018
+2025-09-25 20:17:55,956 - aiogram.event - INFO - Update id=865824781 is not handled. Duration 5 ms by bot id=8373080018
+2025-09-25 20:17:58,614 - aiogram.event - INFO - Update id=865824782 is handled. Duration 566 ms by bot id=8373080018
+2025-09-25 20:18:10,431 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 20:18:11,076 - modules.openai.handlers - ERROR - Ошибка при обработке аудио: Telegram server says - Bad Request: file is too big
+2025-09-25 20:18:11,224 - aiogram.event - INFO - Update id=865824783 is handled. Duration 793 ms by bot id=8373080018
+2025-09-25 20:18:45,293 - aiogram.event - INFO - Update id=865824784 is handled. Duration 142 ms by bot id=8373080018
+2025-09-25 20:18:58,248 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 20:18:58,507 - modules.openai.handlers - ERROR - Ошибка при обработке аудио: Telegram server says - Bad Request: file is too big
+2025-09-25 20:18:58,632 - aiogram.event - INFO - Update id=865824785 is handled. Duration 385 ms by bot id=8373080018
+2025-09-25 20:23:51,664 - aiogram.event - INFO - Update id=865824786 is handled. Duration 135 ms by bot id=8373080018
+2025-09-25 20:24:06,127 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 20:24:09,097 - modules.openai.client - INFO - Транскрибируем аудиофайл в текст
+2025-09-25 20:25:15,063 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-09-25 20:25:15,156 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgIAAxkBAAIDV2jVerXdIfAtPcSSagfVr0xa58TIAALiiAAC_XSpSgEallyiIoibNgQ.m4a
+2025-09-25 20:25:15,157 - modules.openai.client - INFO - Анализируем транскрибированный текст: Погнали! Че там? Че хотела рассказать? Ничего, я просто хотела больше посоветоваться На то ли? Вот Н...
+2025-09-25 20:25:15,157 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста
+2025-09-25 20:27:32,341 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:27:32,353 - modules.openai.client - INFO - Успешно получен ответ от GPT
+2025-09-25 20:27:32,353 - modules.openai.client - INFO - Результат GPT: 9968 символов
+2025-09-25 20:27:32,882 - aiogram.event - INFO - Update id=865824787 is handled. Duration 206756 ms by bot id=8373080018
+2025-09-25 20:29:20,636 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-25 20:29:20,636 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 20:29:20,637 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 20:30:05,928 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 20:30:05,928 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 20:30:06,604 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 20:30:39,271 - aiogram.event - INFO - Update id=865824788 is handled. Duration 572 ms by bot id=8373080018
+2025-09-25 20:31:00,979 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 20:31:04,400 - modules.openai.client - INFO - Транскрибируем аудиофайл в текст
+2025-09-25 20:32:29,094 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-09-25 20:32:29,108 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgIAAxkBAAIDXGjVfFSqnutfa72TGwt9jg0TzcVgAAL7iAAC_XSpSqaeHdMPkOx4NgQ.m4a
+2025-09-25 20:32:29,108 - modules.openai.client - INFO - Анализируем транскрибированный текст: Погнали! Че там? Че хотела рассказать? Ничего, я просто хотела больше посоветоваться. На то ли? Вот....
+2025-09-25 20:32:29,108 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста
+2025-09-25 20:34:47,294 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 503 Service Unavailable"
+2025-09-25 20:34:47,295 - openai._base_client - INFO - Retrying request to /chat/completions in 0.488288 seconds
+2025-09-25 20:35:44,378 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:35:44,403 - modules.openai.client - INFO - Успешно получен ответ от GPT
+2025-09-25 20:35:44,403 - modules.openai.client - INFO - Результат GPT: 16425 символов
+2025-09-25 20:35:44,935 - aiogram.event - INFO - Update id=865824789 is handled. Duration 283960 ms by bot id=8373080018
+2025-09-25 20:39:24,872 - aiogram.event - INFO - Update id=865824790 is handled. Duration 151 ms by bot id=8373080018
+2025-09-25 20:39:37,886 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/266f2cf82f2081af8592d1e8ea2a4f18/query "HTTP/1.1 200 OK"
+2025-09-25 20:39:37,899 - modules.notion.client - INFO - Получено 5 записей из Notion
+2025-09-25 20:39:38,075 - aiogram.event - INFO - Update id=865824791 is handled. Duration 1930 ms by bot id=8373080018
+2025-09-25 20:39:40,237 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/271f2cf8-2f20-8038-9a26-e90c0f7adb85 "HTTP/1.1 200 OK"
+2025-09-25 20:39:40,480 - aiogram.event - INFO - Update id=865824792 is handled. Duration 669 ms by bot id=8373080018
+2025-09-25 20:39:59,921 - modules.openai.client - INFO - Транскрибируем аудиофайл в текст
+2025-09-25 20:41:58,637 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-09-25 20:41:58,649 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgIAAxkBAAIDZGjVfmwRzqDLOXuwEQ0Cq_8_zRhlAAIjiQAC_XSpSvv_Z03B3D42NgQ.mp3
+2025-09-25 20:41:58,649 - modules.openai.client - INFO - Анализируем транскрибированный текст: Hello? Uh, hello sir, I'm Amy speaking with Nikolas. How you doing? Uh, this is Bella and I'm callin...
+2025-09-25 20:41:58,649 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста
+2025-09-25 20:42:19,854 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-25 20:42:19,856 - modules.openai.client - INFO - Успешно получен ответ от GPT
+2025-09-25 20:42:19,856 - modules.openai.client - INFO - Результат GPT: 1138 символов
+2025-09-25 20:42:21,086 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/comments "HTTP/1.1 200 OK"
+2025-09-25 20:42:21,087 - modules.notion.client - INFO - Комментарий создан для страницы 271f2cf8-2f20-8038-9a26-e90c0f7adb85
+2025-09-25 20:42:21,217 - aiogram.event - INFO - Update id=865824793 is handled. Duration 143958 ms by bot id=8373080018
+2025-09-25 21:00:29,177 - aiogram.event - INFO - Update id=865824794 is handled. Duration 582 ms by bot id=8373080018
+2025-09-25 21:00:33,227 - aiogram.event - INFO - Update id=865824795 is handled. Duration 123 ms by bot id=8373080018
+2025-09-25 21:00:35,471 - aiogram.event - INFO - Update id=865824796 is handled. Duration 124 ms by bot id=8373080018
+2025-09-25 21:00:38,078 - aiogram.event - INFO - Update id=865824797 is handled. Duration 1123 ms by bot id=8373080018
+2025-09-25 21:00:45,879 - aiogram.event - INFO - Update id=865824798 is handled. Duration 148 ms by bot id=8373080018
+2025-09-25 21:00:47,451 - aiogram.event - INFO - Update id=865824799 is handled. Duration 136 ms by bot id=8373080018
+2025-09-25 21:00:55,770 - aiogram.event - INFO - Update id=865824800 is handled. Duration 144 ms by bot id=8373080018
+2025-09-25 21:00:58,674 - aiogram.event - INFO - Update id=865824801 is handled. Duration 146 ms by bot id=8373080018
+2025-09-25 21:01:00,449 - aiogram.event - INFO - Update id=865824802 is handled. Duration 118 ms by bot id=8373080018
+2025-09-25 21:01:01,709 - aiogram.event - INFO - Update id=865824803 is handled. Duration 160 ms by bot id=8373080018
+2025-09-25 21:01:05,709 - aiogram.event - INFO - Update id=865824804 is handled. Duration 133 ms by bot id=8373080018
+2025-09-25 21:01:07,243 - aiogram.event - INFO - Update id=865824805 is handled. Duration 141 ms by bot id=8373080018
+2025-09-25 21:01:09,161 - aiogram.event - INFO - Update id=865824806 is handled. Duration 133 ms by bot id=8373080018
+2025-09-25 21:01:19,151 - aiogram.event - INFO - Update id=865824807 is handled. Duration 146 ms by bot id=8373080018
+2025-09-25 21:01:22,567 - aiogram.event - INFO - Update id=865824808 is handled. Duration 123 ms by bot id=8373080018
+2025-09-25 21:01:24,835 - aiogram.event - INFO - Update id=865824809 is handled. Duration 144 ms by bot id=8373080018
+2025-09-25 21:01:26,262 - aiogram.event - INFO - Update id=865824810 is handled. Duration 120 ms by bot id=8373080018
+2025-09-25 21:01:28,617 - aiogram.event - INFO - Update id=865824811 is handled. Duration 216 ms by bot id=8373080018
+2025-09-25 21:01:30,714 - aiogram.event - INFO - Update id=865824812 is handled. Duration 120 ms by bot id=8373080018
+2025-09-25 21:07:25,419 - share.middleware - WARNING - Отклонён доступ для пользователя 7970652293 (@bellaa115)
+2025-09-25 21:07:25,548 - aiogram.event - INFO - Update id=865824813 is handled. Duration 131 ms by bot id=8373080018
+2025-09-25 21:08:10,366 - aiogram.event - INFO - Update id=865824814 is handled. Duration 120 ms by bot id=8373080018
+2025-09-25 21:08:12,234 - aiogram.event - INFO - Update id=865824815 is handled. Duration 152 ms by bot id=8373080018
+2025-09-25 21:08:37,600 - share.utils - INFO - Пользователь 7970652293 добавлен в список разрешённых
+2025-09-25 21:08:37,753 - modules.admin.handlers - INFO - Админ 6979740321 добавил пользователя 7970652293
+2025-09-25 21:08:37,753 - aiogram.event - INFO - Update id=865824816 is handled. Duration 154 ms by bot id=8373080018
+2025-09-25 21:09:42,871 - aiogram.event - INFO - Update id=865824817 is handled. Duration 282 ms by bot id=8373080018
+2025-09-25 21:09:50,090 - modules.openai.handlers - INFO - Обработка аудио для транскрибации
+2025-09-25 21:09:52,613 - modules.openai.client - INFO - Транскрибируем аудиофайл в текст
+2025-09-25 21:11:02,446 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-09-25 21:11:02,454 - modules.openai.client - INFO - Успешно транскрибирован файл: /home/user/my_projects/notion_BHtrans_project/tg_call_bot/share/../temp/CQACAgEAAxkBAAIDEGjSqfrlk725Jq8wDx9WSZb_9cG0AAL1BQACMdiYRtfTHivpcwVdNgQ.mp3
+2025-09-25 21:11:02,455 - modules.openai.client - INFO - Анализируем транскрибированный текст: Hello? Hello, James. Can you hear me now? Can you hear me? Yeah. I can hear you. Yeah. We can hear e...
+2025-09-25 21:11:02,455 - modules.openai.client - INFO - Создаем ответ GPT на основе транскрибированного текста

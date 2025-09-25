@@ -42,3 +42,6 @@ WEBHOOK_PATH = os.getenv("WEBHOOK_PATH", "/webhook")
 
 # Настройки прокси (если нужен)
 PROXY_URL = os.getenv("PROXY_URL")
+
+# Ограничения для OpenAI API
+MAX_AUDIO_SIZE_MB = int(os.getenv("MAX_AUDIO_SIZE_MB", "300"))  # Максимальный размер аудио в МБ

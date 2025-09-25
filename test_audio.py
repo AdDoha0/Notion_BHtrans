@@ -28,7 +28,7 @@ async def test_audio_processing():
         print(f"📝 Транскрибированный текст:\n{transcribed}\n")
         
         print("🤖 Тестирую анализ GPT...")
-        analysis = await create_gptAnswer(transcribed)
+        analysis = await create_gptAnswer(transcribed, "Проанализируй этот текст и дай краткое резюме.")
         print(f"📊 Анализ GPT:\n{analysis}\n")
         
         print("✅ Полный процесс:")
@@ -54,7 +54,7 @@ async def test_text_processing():
     
     try:
         print("🤖 Тестирую анализ текста через GPT...")
-        analysis = await create_gptAnswer(test_text)
+        analysis = await create_gptAnswer(test_text, "Проанализируй этот разговор и создай профиль водителя.")
         print(f"📊 Анализ GPT:\n{analysis}")
         
     except Exception as e:
