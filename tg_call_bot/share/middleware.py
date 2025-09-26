@@ -28,9 +28,9 @@ class AccessControlMiddleware(BaseMiddleware):
                 
                 # Отправляем сообщение об отказе в доступе
                 if isinstance(event, Message):
-                    await event.answer("⛔ У вас нет доступа к этому боту.")
+                    await event.answer("⛔ У вас нет доступа к этому боту. Для получения доступа писать сюда -> @dohaAdam1")
                 elif isinstance(event, CallbackQuery):
-                    await event.answer("⛔ У вас нет доступа к этому боту.", show_alert=True)
+                    await event.answer("⛔ У вас нет доступа к этому боту. Для получения доступа писать сюда -> @dohaAdam1", show_alert=True)
                 
                 return  # Прерываем выполнение
         

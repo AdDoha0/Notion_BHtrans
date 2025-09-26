@@ -19,7 +19,7 @@ async def transcription(file_path: str) -> str:
                 file=audio_file,
             )
         logger.info(f"Успешно транскрибирован файл: {file_path}")
-        return response.text
+        return response
     except Exception as e:
         logger.error(f"Ошибка при транскрибации файла {file_path}: {e}")
         raise

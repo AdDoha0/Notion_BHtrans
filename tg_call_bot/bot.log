@@ -1261,3 +1261,36 @@ aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: messa
 2025-09-25 21:21:15,534 - aiogram.event - INFO - Update id=865824847 is handled. Duration 118 ms by bot id=8373080018
 2025-09-25 21:21:17,386 - aiogram.event - INFO - Update id=865824848 is handled. Duration 1249 ms by bot id=8373080018
 2025-09-25 21:21:18,481 - aiogram.event - INFO - Update id=865824849 is handled. Duration 126 ms by bot id=8373080018
+2025-09-25 21:49:17,201 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-25 21:49:17,202 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 21:49:17,202 - aiogram.dispatcher - INFO - Polling stopped
+2025-09-25 21:49:20,412 - __main__ - INFO - Запуск бота через long polling...
+2025-09-25 21:49:20,412 - aiogram.dispatcher - INFO - Start polling
+2025-09-25 21:49:21,051 - aiogram.dispatcher - INFO - Run polling for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-25 21:50:04,785 - aiogram.event - INFO - Update id=865824850 is handled. Duration 893 ms by bot id=8373080018
+2025-09-25 21:50:06,596 - aiogram.event - INFO - Update id=865824851 is handled. Duration 202 ms by bot id=8373080018
+2025-09-25 21:51:01,738 - share.middleware - WARNING - Отклонён доступ для пользователя 733992623 (@rguchigov)
+2025-09-25 21:51:01,881 - aiogram.event - INFO - Update id=865824852 is handled. Duration 143 ms by bot id=8373080018
+2025-09-26 18:19:21,280 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-09-26 18:19:21,280 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:19:22,762 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 18:19:23,234 - aiogram.event - INFO - Update id=865824853 is handled. Duration 471 ms by bot id=8373080018
+2025-09-26 18:19:23,820 - aiogram.event - INFO - Update id=865824854 is handled. Duration 1056 ms by bot id=8373080018
+2025-09-26 18:38:40,463 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-26 18:38:40,464 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:38:51,690 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 18:39:21,909 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-26 18:39:21,909 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:39:34,401 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 18:42:50,411 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-26 18:42:50,422 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:43:01,701 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 18:48:45,290 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 104] Connection reset by peer
+2025-09-26 18:48:45,290 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:48:57,199 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 18:49:07,345 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-09-26 18:49:07,346 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8373080018)
+2025-09-26 18:49:18,730 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 8373080018)
+2025-09-26 19:16:27,865 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-09-26 19:16:27,896 - aiogram.dispatcher - INFO - Polling stopped for bot @bh212er3_bot id=8373080018 - 'bhtrans-analyzeBot'
+2025-09-26 19:16:27,897 - aiogram.dispatcher - INFO - Polling stopped
